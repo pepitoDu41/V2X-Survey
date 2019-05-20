@@ -76,7 +76,7 @@
 % graphicx was written by David Carlisle and Sebastian Rahtz. It is
 % required if you want graphics, photos, etc. graphicx.sty is already
 % installed on most LaTeX systems. The latest version and documentation
-% can be obtained at: 
+% can be obtained at:
 % http://www.ctan.org/pkg/graphicx
 % Another good source of documentation is "Using Imported Graphics in
 % LaTeX2e" by Keith Reckdahl which can be found at:
@@ -216,46 +216,68 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Problems and Challenges in Mm-Wave Communication}
+\title{Vehicle-to-Everything Communications (V2X) in 5G}
 
 
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Frederik Lukas Schulz}
-\IEEEauthorblockA{RWTH Aachen University\\
-Your Bachelor/Master Program\\
-Your Seminar: Current Trends in Wireless Communications/Wireless Internet Systems\\
-321292\\
-E-mail: frederik.lukas.schulz@rwth-aachen.de}}
+\author{\IEEEauthorblockN{Hugo Rummlinger, Frederik Schulz, Theo DDDDDDD, Anthony DDDDDDD}
+\IEEEauthorblockA{Universitat Politecnica de Cataluna\\
+Master of Science\\
+5G Mobile Communication Systems}}
 
 
 % make the title area
 \maketitle
 
 \begin{abstract}
-In the abstract, you write 2-3 paragraphs which summarize the key parts of your report. 
+In the abstract, you write 2-3 paragraphs which summarize the key parts of your report.
 \end{abstract}
 
 
 \IEEEpeerreviewmaketitle
 
 
-
 \section{Introduction}
-This is a modified version of the IEEE template for conference proceedings that you can use for your report.
+This is a modified version of the IEEE template for conference proceedings that you can use for
+
+\section{Use-Cases}
+\subsection{Vehicle-to-Vehicle}
+\subsection{Vehicle-to-Infrastructure/Network}
+\subsection{Vehicle-to-Person}
+
+
+\section{V2X in LTE Networks}
+\subsection{Network}
+Access Technologie from LTE point of view
+
+\subsection{Requirements}
+Ffrom LTE point of view
+
+\section{Evolution from LTE to 5G}
+
+\subsection{Network}
+Something about new infrstucture
+
+\subsection{Requirements}
+Changed requirements
 
 
 
-\subsection{Subsection Heading Here}
-This is a subsection.
+\section{Other Access Technologies}
+\subsection{VLC}
+\subsection{Bluetooth}
 
+\section{Results and Discussion}
+\subsection{V2X versus DSRC}
+\subsection{Usability or something}
 
-\subsection{Subsubsection Heading Here}
-This is another subsection.
+\section{Conclusion}
+The conclusion goes here.
 
-\section{Here is another section}
-\subsection{	A Subsection with Some Bullet Points}
+\section{Section to see how to insert Table, Graphic and List}
+\subsection{A Subsection with Some Bullet Points}
 If you want, you can put some bullet points.
 \begin{itemize}
 \item This is a bullet point:
@@ -272,14 +294,14 @@ a+b=c.
 
 \begin{figure} [h]
    \centering
-  \includegraphics[width=0.5\linewidth]{boat1.png}
+  \includegraphics[width=0.5\linewidth]{_Graphics/boat1.png}
   \caption{Example of a figure caption (the caption is placed below the figure).}
   \label{fig:boat1}
 \end{figure}
 
 Figure \ref{fig:boat1} shows a boat.
 
-In the next page, I will create a table. 
+In the next page, I will create a table.
 \begin{table}[h!]
   \begin{center}
     \caption{Table Caption.}
@@ -294,9 +316,6 @@ In the next page, I will create a table.
     \end{tabular}
   \end{center}
 \end{table}
-
-\section{Conclusion}
-The conclusion goes here. The template will number citations consecutively within brackets \cite{chalmers2000developing}. The sentence punctuation follows the bracket \cite{agyapong2012economic}. Refer simply to the reference number, as in \cite{pham2013pricing}; do not use "Ref. \cite{pham2013pricing}" or "reference \cite{pham2013pricing}" except at the beginning of a sentence: "Reference \cite{pham2013pricing} was the first ..." 
 
 \bibliographystyle{IEEEtran} %the IEEtran file. You should not modify this file
 \bibliography{IEEEabrv,references}
