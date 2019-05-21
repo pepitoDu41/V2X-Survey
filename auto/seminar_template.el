@@ -11,9 +11,6 @@
     "IEEEtran12"
     "geometry"
     "graphicx")
-   (LaTeX-add-labels
-    "fig:boat1"
-    "tab:table1")
    (LaTeX-add-bibliographies
     "IEEEabrv"
     "references"))

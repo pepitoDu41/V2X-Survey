@@ -238,9 +238,19 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 
 \IEEEpeerreviewmaketitle
 
+\section{Papers Used \& How To Cite Them}
+\begin{itemize}
+\item V2X access technologies: Regulation, research, and remaining challenges [Cite: machardy2018] \cite{machardy2018}
+\item Dedicated short-range communications (DSRC) standards in the United States [Cite: kenney2011] \cite{kenney2011}
+\item Standards for vehicular communication---from IEEE 802.11p to 5G [Cite: festag2015]\cite{festag2015}
+\item Ready to roll: Why 802.11 p beats LTE and 5G for V2x [Cite: filippi2016] \cite{filippi2016}
+\item Heterogeneous Vehicular Networking: A Survey on Architecture, Challenges, and Solutions [Cite: zheng2015] \cite{zheng2015}
+\item LTE-advanced in 3GPP Rel -13/14: an evolution toward 5G [Cite: lee2016] \cite{lee2016}
+  \item LTE for vehicular networking: a survey [Cite: araniti2013] \cite{araniti2013}
+  \end{itemize}
 
 \section{Introduction}
-This is a modified version of the IEEE template for conference proceedings that you can use for
+- Cooperative intelligent transportation systems (C-ITS)
 
 \section{Use-Cases}
 \subsection{Vehicle-to-Vehicle}
@@ -249,73 +259,99 @@ This is a modified version of the IEEE template for conference proceedings that 
 
 
 \section{V2X in LTE Networks}
+- use \cite{araniti2013}
 \subsection{Network}
-Access Technologie from LTE point of view
+Access Technologie from LTE point of vi
 
 \subsection{Requirements}
 Ffrom LTE point of view
 
+\subsection{Services}
+
 \section{Evolution from LTE to 5G}
+- use \cite{lee2016}
 
 \subsection{Network}
 Something about new infrstucture
 
 \subsection{Requirements}
 Changed requirements
-
-
+\subsection{Services}
 
 \section{Other Access Technologies}
-\subsection{VLC}
+\subsection{Dedicated Short Range Communication}
+- use \cite{kenney2011}
+- use \cite{machardy2018}
+
+- Most discussions of, vehicular ad-hod networks, or VANETs communications envision the use of dedicated short-range communi- cations (DSRC), supported by the IEEE 802.11p standard \cite{kenney2011}
+- low end-to-end latency, flexible organization due to a lack of centralized control, and relatively low cost. But it is also beset by a number of issues, including service degrada- tion in congested scenarios, security problems, and difficulty coping with compromised line of sight \cite{kenney2011}
+
+\subsection{Visible Light Communication}
 \subsection{Bluetooth}
 
 \section{Results and Discussion}
-\subsection{V2X versus DSRC}
-\subsection{Usability or something}
+\subsection{Cellular V2X versus DSRC}
+- DSRC: need for a dense deployment to cope with line of sight problems, service degradation in congestion scenarios to name a few \cite{kenney2011}
+- Who will pay for theses as IEEE 802.11p networks are typically not used outside, therefore networks typically do not have access control as cellular networks \cite{kenney2011} New use case for IEEE 802.11 protocol
+- DSRC mandated standard by U.S. Department of Transportation (USDOT), European Telecommunications Standards Institute (ETSI), the European Committee for Standardization (CEN) [14], and the Association of Radio Industries and Businesses (ARIB) \cite{kenney2011}
+- Cellular V2X (C-V2X) Compared to DSRC, these technologies offer a number of advantages, including a much larger coverage area, pre-existing infras- tructure, deterministic security and QoS guarantees, as well more robust scalability \cite{kenney2011}
+- C-V2X has on negative side: Centralized architecture, higher price for network, higher end-to-end-latency!, dependency on network connectivity \cite{kenney2011}
+- Latency is a major obstacle for C-V2X deployment. Services with high need for time sensitivity, e.g. cooperative platooning or pre-crash sensing need low latency \cite{kenney2011}
+- Relate here somehow to Ultra Reliable Low Latency stuff from lecture.
+- How is price determined in DSRC?
+- Dependency of network connectivity should be able to be done by D2D sidelink without eNB or gNB beeing available. Source here.
+- Would D2D sidelink also solve latency issues?
+
+\subsection{Other Technologies for V2X}
+- several other technologies, including Bluetooth, satellite radio, and visible light communications have been considered for use for V2X applications. While each of these technologies has features which make it potentially promis- ing, each also has some unavoidable limitations, as covered in Section III-D, \cite{kenney2011}
+
+\subsection{Heterogeneous Network}
+- maybe something about our opinion if this solution is viable.
+- good source \cite{zheng2015}
 
 \section{Conclusion}
 The conclusion goes here.
 
-\section{Section to see how to insert Table, Graphic and List}
-\subsection{A Subsection with Some Bullet Points}
-If you want, you can put some bullet points.
-\begin{itemize}
-\item This is a bullet point:
-\item This is another bullet point.
-\end{itemize}
+%\section{Section to see how to insert Table, Graphic and List}
+%\subsection{A Subsection with Some Bullet Points}
+%If you want, you can put some bullet points.
+%\begin{itemize}
+%\item This is a bullet point:
+%\item This is another bullet point.
+%\end{itemize}
 
-\subsection{Some Equations}
-Here is an equation:
-\begin{equation}
-a+b=c.
-\end{equation}
+%\subsection{Some Equations}
+%Here is an equation:
+%\begin{equation}
+%a+b=c.
+%\end{equation}
 
-\subsection{Figures and Tables}
+%\subsection{Figures and Tables}
 
-\begin{figure} [h]
-   \centering
-  \includegraphics[width=0.5\linewidth]{_Graphics/boat1.png}
-  \caption{Example of a figure caption (the caption is placed below the figure).}
-  \label{fig:boat1}
-\end{figure}
+%\begin{figure} [h]
+%   \centering
+%  \includegraphics[width=0.5\linewidth]{_Graphics/boat1.png}
+%  \caption{Example of a figure caption (the caption is placed below the figure).}
+%  \label{fig:boat1}
+%\end{figure}
 
-Figure \ref{fig:boat1} shows a boat.
+%Figure \ref{fig:boat1} shows a boat.
 
-In the next page, I will create a table.
-\begin{table}[h!]
-  \begin{center}
-    \caption{Table Caption.}
-    \label{tab:table1}
-    \begin{tabular}{l|l|r}
-      \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
-      $\alpha$ & $\beta$ & $\gamma$ \\
-      \hline
-      1 & 1110.1 & a\\
-      2 & 10.1 & b\\
-      3 & 23.113231 & c\\
-    \end{tabular}
-  \end{center}
-\end{table}
+%In the next page, I will create a table.
+%\begin{table}[h!]
+%  \begin{center}
+%    \caption{Table Caption.}
+%    \label{tab:table1}
+%    \begin{tabular}{l|l|r}
+%      \textbf{Value 1} & \textbf{Value 2} & \textbf{Value 3}\\
+%      $\alpha$ & $\beta$ & $\gamma$ \\
+%      \hline
+%      1 & 1110.1 & a\\
+%      2 & 10.1 & b\\
+%      3 & 23.113231 & c\\
+%    \end{tabular}
+%  \end{center}
+%\end{table}
 
 \bibliographystyle{IEEEtran} %the IEEtran file. You should not modify this file
 \bibliography{IEEEabrv,references}

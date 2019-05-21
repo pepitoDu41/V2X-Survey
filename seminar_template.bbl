@@ -21,17 +21,52 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{chalmers2000developing}
-R.~C. Chalmers and K.~C. Almeroth, ``Developing a multicast metric,'' in
-  \emph{Proc. IEEE Global Telecommunications Conference (Globecom)}, 2000.
+\bibitem{machardy2018}
+Z.~MacHardy, A.~Khan, K.~Obana, and S.~Iwashina, ``V2x access technologies:
+  Regulation, research, and remaining challenges,'' \emph{IEEE Communications
+  Surveys \& Tutorials}, vol.~20, no.~3, pp. 1858--1877, 2018.
 
-\bibitem{agyapong2012economic}
-P.~K. Agyapong and M.~Sirbu, ``Economic incentives in information-centric
-  networking: Implications for protocol design and public policy,'' \emph{IEEE
-  Communications Magazine}, vol.~50, no.~12, pp. 18--26, 2012.
+\bibitem{kenney2011}
+J.~B. Kenney, ``Dedicated short-range communications (dsrc) standards in the
+  united states,'' \emph{Proceedings of the IEEE}, vol.~99, no.~7, pp.
+  1162--1182, 2011.
 
-\bibitem{pham2013pricing}
-T.-M. Pham, S.~Fdida, and P.~Antoniadis, ``Pricing in information-centric
-  network interconnection,'' in \emph{Proc. IFIP Networking Conference}, 2013.
+\bibitem{festag2015}
+\BIBentryALTinterwordspacing
+A.~Festag, ``Standards for vehicular communication---from ieee 802.11p to 5g,''
+  \emph{e {\&} i Elektrotechnik und Informationstechnik}, vol. 132, no.~7, pp.
+  409--416, Nov 2015. [Online]. Available:
+  \url{https://doi.org/10.1007/s00502-015-0343-0}
+\BIBentrySTDinterwordspacing
+
+\bibitem{filippi2016}
+A.~Filippi, K.~Moerman, G.~Daalderop, P.~D. Alexander, F.~Schober, and
+  W.~Pfliegl, ``Ready to roll: Why 802.11 p beats lte and 5g for v2x,''
+  \emph{white paper by NXP Semiconductors, Cohda Wireless, and Siemens, 2016},
+  2016.
+
+\bibitem{zheng2015}
+K.~{Zheng}, Q.~{Zheng}, P.~{Chatzimisios}, W.~{Xiang}, and Y.~{Zhou},
+  ``Heterogeneous vehicular networking: A survey on architecture, challenges,
+  and solutions,'' \emph{IEEE Communications Surveys Tutorials}, vol.~17,
+  no.~4, pp. 2377--2396, Fourthquarter 2015.
+
+\bibitem{karagiannis2011}
+G.~{Karagiannis}, O.~{Altintas}, E.~{Ekici}, G.~{Heijenk}, B.~{Jarupan},
+  K.~{Lin}, and T.~{Weil}, ``Vehicular networking: A survey and tutorial on
+  requirements, architectures, challenges, standards and solutions,''
+  \emph{IEEE Communications Surveys Tutorials}, vol.~13, no.~4, pp. 584--616,
+  Fourth 2011.
+
+\bibitem{lee2016}
+J.~{Lee}, Y.~{Kim}, Y.~{Kwak}, J.~{Zhang}, A.~{Papasakellariou}, T.~{Novlan},
+  C.~{Sun}, and Y.~{Li}, ``Lte-advanced in 3gpp rel -13/14: an evolution toward
+  5g,'' \emph{IEEE Communications Magazine}, vol.~54, no.~3, pp. 36--42, March
+  2016.
+
+\bibitem{araniti2013}
+G.~{Araniti}, C.~{Campolo}, M.~{Condoluci}, A.~{Iera}, and A.~{Molinaro}, ``Lte
+  for vehicular networking: a survey,'' \emph{IEEE Communications Magazine},
+  vol.~51, no.~5, pp. 148--157, May 2013.
 
 \end{thebibliography}

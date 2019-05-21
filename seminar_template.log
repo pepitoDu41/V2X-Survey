@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.17)  20 MAY 2019 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.17)  21 MAY 2019 16:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -277,24 +277,19 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 283.
+(Font)              <12> on input line 243.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 283.
+(Font)              <8> on input line 243.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 283.
+(Font)              <6> on input line 243.
+
+Overfull \hbox (28.75935pt too wide) in paragraph at lines 243--244
+[]\OT1/ptm/m/n/12 V2X ac-cess tech-nolo-gies: Reg-u-la-tion, re-search, and re-
+main-ing chal-lenges [Cite: machardy2018]
+ []
 
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<_Graphics/boat1.png, id=10, 488.82625pt x 358.33875pt>
-File: _Graphics/boat1.png Graphic file (type png)
-<use _Graphics/boat1.png>
-Package pdftex.def Info: _Graphics/boat1.png  used on input line 297.
-(pdftex.def)             Requested size: 227.62206pt x 166.8609pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 309.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 309.
-
-(./seminar_template.bbl)
+(./seminar_template.bbl [2])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -306,28 +301,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[2 <./_Graphics/boat1.png>] (./seminar_template.aux) ) 
+[3] (./seminar_template.aux) ) 
 Here is how much of TeX's memory you used:
- 2780 strings out of 492649
- 45179 string characters out of 6129621
- 118184 words of memory out of 5000000
- 6637 multiletter control sequences out of 15000+600000
- 39575 words of font info for 75 fonts, out of 8000000 for 9000
+ 2765 strings out of 492649
+ 44967 string characters out of 6129621
+ 119183 words of memory out of 5000000
+ 6630 multiletter control sequences out of 15000+600000
+ 35832 words of font info for 69 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,9n,25p,289b,264s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/
-texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
-/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on seminar_template.pdf (2 pages, 310556 bytes).
+ 41i,5n,25p,363b,222s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvi
+ps/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on seminar_template.pdf (3 pages, 54979 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 31 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
