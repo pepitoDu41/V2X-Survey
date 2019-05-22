@@ -2,7 +2,7 @@
 \usepackage[a4paper, left=2.5cm, right=2.5cm, bottom=2cm, top=2.5cm]{geometry}
 \usepackage{graphicx}
 
-
+\usepackage{makecell}
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load)
 
@@ -252,9 +252,9 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 
 \section{Introduction}
 - Cooperative intelligent transportation systems (C-ITS) gained a lot of interest from different groups. V2X, short for Vehicle to Everything communication, is a specific case of ITS, dealing with wireless communication and coordination between vehicles and their environment.
-- V2X can be taken in this paper to refer specifically to communication between overland road vehicles and other con- cerned entities, be they pedestrians, infrastructure, or other vehicles. \cite{kenney2011}
-- Communication in V2X cases happens in a frequently changing vehicular ad-hoc networks (VANET)s, where nodes of the network leave and join the network at a specific location as frequently as the traffic floads. This VANET is supported by a static network. Nodes of this network a typically referred to as road side units (RSU), helping to coordinate non-static nodes communication traffic, distributing data and providing additional services \cite{kenney2011}.
-- V2X technology tries to increase safety, efficiency and reduce economic costs of the current and future transportation system. \cite{kenney2011}
+- V2X can be taken in this paper to refer specifically to communication between overland road vehicles and other con- cerned entities, be they pedestrians, infrastructure, or other vehicles. \cite{machardy2018}
+- Communication in V2X cases happens in a frequently changing vehicular ad-hoc networks (VANET)s, where nodes of the network leave and join the network at a specific location as frequently as the traffic floads. This VANET is supported by a static network. Nodes of this network a typically referred to as road side units (RSU), helping to coordinate non-static nodes communication traffic, distributing data and providing additional services \cite{machardy2018}.
+- V2X technology tries to increase safety, efficiency and reduce economic costs of the current and future transportation system. \cite{machardy2018}
 
 \section{Use-Cases}
 \subsection{Vehicle-to-Vehicle}
@@ -262,34 +262,34 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 \subsection{Vehicle-to-Person}
 
 \section{Services}
-- Services can be grouped into 4 major categories: Infotainment, Traffic Efficency, Cooperative Driving \cite{kenney2011}
+- Services can be grouped into 4 major categories: Infotainment, Traffic Efficency, Cooperative Driving \cite{machardy2018}
 
 - Infotainment:
 - usually non-driving related topics.
 - geo-realated advertisment
 - messaging
 - general media transfer, like internet services, netflix, etc.
-- Infotainment services are characterized by relatively low min- imum latency requirements (latency on the order of 500 - 1000 ms, minimum transmission frequency on the order of 1 Hz) and throughput comparable to conventional mobile broadband services, up to around 80 Mbp \cite{kenney2011}
+- Infotainment services are characterized by relatively low min- imum latency requirements (latency on the order of 500 - 1000 ms, minimum transmission frequency on the order of 1 Hz) and throughput comparable to conventional mobile broadband services, up to around 80 Mbp \cite{machardy2018}
 
 - Traffic Efficency:
-- Broad application, generally tries to optimize traffic flow \cite{kenney2011}
+- Broad application, generally tries to optimize traffic flow \cite{machardy2018}
 - intersection timing handling
 - real time route planning and changing, dependent on current/live situtation
 - needs to exchange all information about current speed, current possition, as also destiny of a car
-- usually not safety critical \cite{kenney2011}
-- medium latency and throughput \cite{kenney2011}
+- usually not safety critical \cite{machardy2018}
+- medium latency and throughput \cite{machardy2018}
 
 -Traffic Safety:
 - goal is to reduce frequency, severity of collision in our current transportation system, with regards vehicles involved.
 - need for critical decision making, coping with non-standard behaviour of traffic participants, increase safety of especially, cyclist, pedestrians
 - clearing roads for emergency cars
-- Including not only crash prevention, but also knowing when an inavoidable crash will happen (pre-crash sensing) and taking all needed steps to reduce the impact of that event \cite{kenney2011}
-- pre-crash sensing has highest requirements in this category: minimum round-trip latency of 50ms with 10Hz broadcast frequency \cite{kenney2011}.
-- requirements for troughput will increase in the future, up to 700 mbps between vanet nodes estimated \cite{kenney2011}
+- Including not only crash prevention, but also knowing when an inavoidable crash will happen (pre-crash sensing) and taking all needed steps to reduce the impact of that event \cite{machardy2018}
+- pre-crash sensing has highest requirements in this category: minimum round-trip latency of 50ms with 10Hz broadcast frequency \cite{machardy2018}.
+- requirements for troughput will increase in the future, up to 700 mbps between vanet nodes estimated \cite{machardy2018}
 - leads to a need for a high throughput, ultra reliable robust network.
 
 \section{V2X in LTE Networks}
-- use \cite{araniti2013}
+-  maybe  use \cite{araniti2013}
 \subsection{Network}
 Access Technologie from LTE point of vi
 
@@ -299,7 +299,7 @@ Ffrom LTE point of view
 \subsection{Services}
 
 \section{Evolution from LTE to 5G}
-- use \cite{lee2016}
+- maybe use \cite{lee2016}
 
 \subsection{Network}
 Something about new infrstucture
@@ -310,40 +310,103 @@ Something about new infrstucture
 \subsection{Services}
 
 \section{Other Access Technologies}
+The following section deals with access technologies for V2X communication besides or in cooperation with cellular networks. We will only refer to the access technologies itself, if at all mentioning the eventually necessary infrastructure only briefly.
 \subsection{Dedicated Short Range Communication}
-- use \cite{kenney2011}
-- use \cite{machardy2018}
+Most scientific papers refer to dedicated short range communication (DSRC) as systems using IEEE 802.11p and  IEEE 1609 (WAVE) standards together for communication\cite{machardy2018}. Hereby the 802.11p standard allows for a setup of vehicular ad-hoc networks (VANET's) taking care of the physical (PHY) layer and the medium access (MAC) layer while the WAVE standard defines networking and some application related parts like security and authentication.
+As an amendment to the Wi-Fi specification 802.11 defined by the IEEE organisation, 802.11p allows for inter device communication and is especially developed with V2X communication in mind. It facilitates the communication without the usual need for an basic service set (BSS, e.g. access point or something similar), allowing for D2D communication without a central coordinator \cite{machardy2018}. The standard itself does not define a specific operational frequencies, rather it defines the procedure of communication, leaving the choice of the used frequency to the authorities. As requirements for in V2X communication differ highly from typical Wi-Fi communication, 802.11p introduces a new medium access method called tiered contention multiple access (TMAC). This MAC technique allows for a prioritization of messages which is not possible with the typically used CSMA/CA technique \cite{machardy2018}. Especially for safety critical messages, relate to traffic safety like pre-crash sensing a prioritization of data flows is essential.
+As with most wireless communications synchronization is needed for communication in DSRC \cite{kenney2011}. With the lack of an central coordination entity routing of multi-hop is a hard task in VANET's when mobility of nodes is high. Due to the fastly changing topology of the network, routes can be already obsoleted when found i\cite{machardy2018}. To which degree this affects communication depends heavily on the used routing protocol.
+Another aspect in V2X communication is safety, as it is critical to have reliable communication partners. Users acting maliciously can spam the network or trying to insert wrong data into the network. DSRC uses a private key infrastructure for this aspect. Hereby a central authority distributes autonomous and temporal certificates to vehicles. Those are then used to sign messages. As malicious users can not be detected upfront there exist an entity, misbehaviour authority, which is entrusted with detecting malicious vehicles and adding them to a blacklist. For this system to work, vehicles need to regularly update their own list of blacklisted certificates. As this list can be relatively large, this system imposes requirements in terms of throughput and latency \cite{machardy2018}.
 
-- Most discussions of, vehicular ad-hod networks, or VANETs communications envision the use of dedicated short-range communi- cations (DSRC), supported by the IEEE 802.11p standard \cite{kenney2011}
-- low end-to-end latency, flexible organization due to a lack of centralized control, and relatively low cost. But it is also beset by a number of issues, including service degrada- tion in congested scenarios, security problems, and difficulty coping with compromised line of sight \cite{kenney2011}
+Summarizing it can be said, that DSRC allows for an low-end-to-end latency, a flexible organisation of nodes and relatively low cost for deployment in the V2X use-case. But it also entails a number of issues, including throughput problems in congestion situations, security issues and difficulties to handle non-line-of-sight communication \cite{machardy2018}. The U.S. Government of Transportation (USGOT) already specified DSRC for deployment. In the following this specification is used exemplary.
+
+\subsubsection*{Standardization U.S. Government of Transportation}
+- the following technical details are üall taken from the standardization from the USGOT and are not globally. But can be seen as examplary. for realisation for DSRC
+- OFDMA uses a 10 MHz channel in DSRC
+-  Testing of DSRC in the U.S. has focused on 10 MHz channels, based on the desire to support many parallel types of applications, and on physical testing that suggests this width is well suited to the delay and Doppler spreads likely to be encountered in the vehicular environ- ment \cite{kenney2011}
+- for safety critival a braoder channel allows for less latency. But 20 MhZ channel have more noise.
+- multiple mudolation rates
+\begin{table}[h!]
+  \begin{center}
+    \caption{Modulation Options in DSRC 10 MHz OFDMA Channels. \cite{kenney2011}}
+    \label{tab:table1}
+    \begin{tabular}{ccccc}
+      \textbf{\makecell{Modulation \\ Technique}} & \textbf{\makecell{Coded \\ Bit Rate\\ (Mbpcs)}} & \textbf{\makecell{Coding \\ Rate}} & \textbf{\makecell{Data Rate \\ (Mbps)}} &\textbf{ \makecell{Data Bits\\ per \\OFDMA Symbol}}\\
+      \hline
+      BPSK &6 & 1/2 &3 &24\\
+      BPSK&6 &3/4&4.5&36\\
+      QPSK&12 &1/2&6&48\\
+      QPSK&12&3/4&9&72\\
+      16-QAM&24&1/2&12&96\\
+      16-QAM&24&3/4&18&144\\
+      64-QAM&36&2/3&24&192\\
+      64-QAM&36&3/4&27&216\\
+
+    \end{tabular}
+  \end{center}
+\end{table}
+- Forward error correction (FEC) coding is applied to the user bits, which reduces the effective user bit rate but also improves the probability of successful decoding
+- opertes in the 5.9 GHz spectrum.
+- Mac the traditional 802.11 functions of beacon- ing, synchronization, authentication, and association are not needed at the MAC sublayer for outside of contect bassic service set (OCB) communication
+- Timing Advertisement (TA) frame, which can be used to announce information about the sender’s time source. needed to sync
+- other functionalities are optionall and implemented at higher layers \cite{kenney2011}
+- most communication probably single hop, therefore new layer 3 protocol\cite{kenney2011}
+- also channel congestion is sicnificant concern for DSRC \cite{machardy2018}, efficency importatnt and new protocol goodd
+- new Layer 3 protocol that is efficient for these 1-hop transmissions: the WAVE Short Message Proto- col (WSMP). Packets sent using WSMP are referred to as WAVE Short Messages (WSMs).
+- authentication and encyrpion of messages is deinfed be WAVE and description ouf of scope.
+
+\begin{figure} [h]
+   \centering
+  \includegraphics[width=0.5\linewidth]{_Graphics/layer_architecture_dsrc.png}
+  \caption{Architecture of Layer Structure in DSRC (by USGOT). \cite{kenney2011}}
+  \label{fig:boat1}
+\end{figure}
 
 \subsection{Visible Light Communication}
 \subsection{Bluetooth}
 
 \section{Results and Discussion}
 \subsection{Cellular V2X versus DSRC}
-- DSRC: need for a dense deployment to cope with line of sight problems, service degradation in congestion scenarios to name a few \cite{kenney2011}
-- Who will pay for theses as IEEE 802.11p networks are typically not used outside, therefore networks typically do not have access control as cellular networks \cite{kenney2011} New use case for IEEE 802.11 protocol
-- DSRC mandated standard by U.S. Department of Transportation (USDOT), European Telecommunications Standards Institute (ETSI), the European Committee for Standardization (CEN) [14], and the Association of Radio Industries and Businesses (ARIB) \cite{kenney2011}
-- Cellular V2X (C-V2X) Compared to DSRC, these technologies offer a number of advantages, including a much larger coverage area, pre-existing infras- tructure, deterministic security and QoS guarantees, as well more robust scalability \cite{kenney2011}
-- C-V2X has on negative side: Centralized architecture, higher price for network, higher end-to-end-latency!, dependency on network connectivity \cite{kenney2011}
-- Latency is a major obstacle for C-V2X deployment. Services with high need for time sensitivity, e.g. cooperative platooning or pre-crash sensing need low latency \cite{kenney2011}
+- DSRC: need for a dense deployment to cope with line of sight problems, service degradation in congestion scenarios to name a few \cite{machardy2018}
+- Who will pay for theses as IEEE 802.11p networks are typically not used outside, therefore networks typically do not have access control as cellular networks \cite{machardy2018} New use case for IEEE 802.11 protocol
+- DSRC mandated standard by U.S. Department of Transportation (USDOT), European Telecommunications Standards Institute (ETSI), the European Committee for Standardization (CEN) [14], and the Association of Radio Industries and Businesses (ARIB) \cite{machardy2018}
+- Cellular V2X (C-V2X) Compared to DSRC, these technologies offer a number of advantages, including a much larger coverage area, pre-existing infras- tructure, deterministic security and QoS guarantees, as well more robust scalability \cite{machardy2018}
+- C-V2X has on negative side: Centralized architecture, higher price for network, higher end-to-end-latency!, dependency on network connectivity \cite{machardy2018}
+- Latency is a major obstacle for C-V2X deployment. Services with high need for time sensitivity, e.g. cooperative platooning or pre-crash sensing need low latency \cite{machardy2018}
 - Relate here somehow to Ultra Reliable Low Latency stuff from lecture.
 - How is price determined in DSRC?
 - Dependency of network connectivity should be able to be done by D2D sidelink without eNB or gNB beeing available. Source here.
 - Would D2D sidelink also solve latency issues?
+- evelopment of a Channel Congestion Control
+algorithm, especially for the safety channe \cite{kenney2011}
 
-\subsection{Other Technologies for V2X}
-- several other technologies, including Bluetooth, satellite radio, and visible light communications have been considered for use for V2X applications. While each of these technologies has features which make it potentially promis- ing, each also has some unavoidable limitations, as covered in Section III-D, \cite{kenney2011}
+\begin{table}[h!]
+  \begin{center}
+  \caption{Summary of Challenges for C-V2X and 802.11p-based DSRC. \cite{machardy2018}}
+    \label{tab:table1}
+    \begin{tabular}{lll}
+      \textbf{\makecell{KPI}} & \textbf{\makecell{802.11p-based DSRC}} & \textbf{\makecell{Cellular V2X}} \\
+      \hline
+      \textbf{Latency}&{\tiny \makecell*[{{p{6.5cm}}}]{Not a cause for concern for 802.11p-based DSRC under normal operating conditions. An elevated packer error rate and the consequent need to retransmit messages can cause increased latency under sub-optimal conditions}}&{\tiny \makecell*[{{p{6.5cm}}}]{When operating through infrastructural nodes (e.g. eNB,EPC), processing delay is potentially problematic. Sidelink D2D and the provision of local edge resources are potential solutions to the problem of high latency}}\\
+      \textbf{Capacity}&{\tiny \makecell*[{{p{6.5cm}}}]{Vehicular traffic congestion (several hundred vehicles within a 300m radius) can quickly cause high channel congestion and severely impact packer error rate. A potential path toward solving congestion issues may lie in improved congestion control schemes and controlling rate of transmissions. Optimal data-rates in the ballpark of 6 to potentially 27 Mbps are troublingly low, and may be insufficient to support many forthcoming V2X applications}}&{\tiny \makecell*[{{p{6.5cm}}}]{Depending on the size of the cell, frequent unicast transmissions via eNB from hundreds of vehicles can cause significant congestion. Using eMBMS or sidelink D2D may solve this problem. 5G aims to support data-rates measured in Gbps, which should be sufficient for all considered V2X applications}}\\
+      \textbf{Coverage}&{\tiny \makecell*[{{p{6.5cm}}}]{LOS and relatively short communication range have implications for effective coverage for 802.11p-based DSRC. Communication through intermediate infrastructural nodes (e.g. RSUs) is one potential solution to the LOS communication problem.}}&{\tiny \makecell*[{{p{6.5cm}}}]{Coverage, particularly in mountainous and rural areas, can be inconsistent. Sidelink D2D is one potential solution to providing ubiquitous V2V coverage.}}\\
+      \textbf{Security}&{\tiny \makecell*[{{p{6.5cm}}}]{Due to its ad-hoc nature, DSRC is vulnerable to a number of potential attacks on availability, authenticity, confidentiality and integrity. Some of these problems may be ameliorated by the implementation of vehicular private key infrastructure and decentralized misbehaviour detection, but many theoretical attacks, like vehicular worms and wormhole attacks, remain hard to defend against.}}&{\tiny \makecell*[{{p{6.5cm}}}]{Cellular V2X, the outgrowth of a centralized and long-commercialized communications technology, is somewhat less vulnerable to many security problems. Some attacks, particularly attacks on availability like jamming, remain difficult to defend against.}}\\
+      \textbf{Privacy}&{\tiny \makecell*[{{p{6.5cm}}}]{The use of temporary pseudonymous certificates for authentication V2V communication provide a measure of privacy for DSRC nodes. Sophisticated eavesdropping and data interception may still pose a risk to driver privacy.}}&{\tiny \makecell*[{{p{6.5cm}}}]{The association of cellular communications with subscriber ID represents a potential compromise of UE privacy, particularly regarding authorities and network operators.}}\\
+      \textbf{\makecell[l]{Infrastr.\\ \& Cost}}&{\tiny \makecell*[{{p{6.5cm}}}]{The lack of existing DSRC infrastructure and requirement for an extra DSRC-capable module in each vehicle stand to incur significant costs, both for municipal authorities and end users.}}&{\tiny \makecell*[{{p{6.5cm}}}]{The existing cellular infrastructure eases potential costs on municipal authorities, but high mobile data rates and cellular radios in each vehicle mean potentially high costs for end users.}}\\
+    \end{tabular}
+  \end{center}
+\end{table}
+\subsection{Bluetooth and VLC}
+- several other technologies, including Bluetooth, satellite radio, and visible light communications have been considered for use for V2X applications. While each of these technologies has features which make it potentially promis- ing, each also has some unavoidable limitations, as covered in Section III-D, \cite{machardy2018}
 
 \subsection{Heterogeneous Network}
 - maybe something about our opinion if this solution is viable.
 - good source \cite{zheng2015}
+- Choice of wireless technology need not be an either-or proposition; many analyses have shown that a het- erogeneous solution can outperform either technology alone \cite{machardy2018}
 
 \subsection{Standardization}
-- While much of the technology involved in V2X communi- cation has been well-coordinated internationally, a number of regional differences have arisen. One of the most pointed dif- ference between the U.S. and EU V2X standards are the mes- sage sets defined for communication between vehicles \cite{kenney2011}
+- While much of the technology involved in V2X communi- cation has been well-coordinated internationally, a number of regional differences have arisen. One of the most pointed dif- ference between the U.S. and EU V2X standards are the mes- sage sets defined for communication between vehicles \cite{machardy2018}
 - could be a problem for traveling, common standard would be necessary to enable easier production and easier traveling.
-- For detailed message evaluation see \cite{kenney2011}.
+- For detailed message evaluation see \cite{machardy2018}.
 
 \section{Conclusion}
 The conclusion goes here.
@@ -374,7 +437,7 @@ The conclusion goes here.
 %Figure \ref{fig:boat1} shows a boat.
 
 %In the next page, I will create a table.
-%\begin{table}[h!]
+%\Begin{table}[h!]
 %  \begin{center}
 %    \caption{Table Caption.}
 %    \label{tab:table1}

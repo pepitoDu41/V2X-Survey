@@ -10,7 +10,11 @@
     "IEEEtran"
     "IEEEtran12"
     "geometry"
-    "graphicx")
+    "graphicx"
+    "makecell")
+   (LaTeX-add-labels
+    "tab:table1"
+    "fig:boat1")
    (LaTeX-add-bibliographies
     "IEEEabrv"
     "references"))
