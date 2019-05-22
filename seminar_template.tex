@@ -246,17 +246,47 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 \item Ready to roll: Why 802.11 p beats LTE and 5G for V2x [Cite: filippi2016] \cite{filippi2016}
 \item Heterogeneous Vehicular Networking: A Survey on Architecture, Challenges, and Solutions [Cite: zheng2015] \cite{zheng2015}
 \item LTE-advanced in 3GPP Rel -13/14: an evolution toward 5G [Cite: lee2016] \cite{lee2016}
-  \item LTE for vehicular networking: a survey [Cite: araniti2013] \cite{araniti2013}
+\item LTE for vehicular networking: a survey [Cite: araniti2013] \cite{araniti2013}
+  \item Use cases, requirements, and design considerations for 5G V2X [Cite: boban2017] \cite{boban2017}
   \end{itemize}
 
 \section{Introduction}
-- Cooperative intelligent transportation systems (C-ITS)
+- Cooperative intelligent transportation systems (C-ITS) gained a lot of interest from different groups. V2X, short for Vehicle to Everything communication, is a specific case of ITS, dealing with wireless communication and coordination between vehicles and their environment.
+- V2X can be taken in this paper to refer specifically to communication between overland road vehicles and other con- cerned entities, be they pedestrians, infrastructure, or other vehicles. \cite{kenney2011}
+- Communication in V2X cases happens in a frequently changing vehicular ad-hoc networks (VANET)s, where nodes of the network leave and join the network at a specific location as frequently as the traffic floads. This VANET is supported by a static network. Nodes of this network a typically referred to as road side units (RSU), helping to coordinate non-static nodes communication traffic, distributing data and providing additional services \cite{kenney2011}.
+- V2X technology tries to increase safety, efficiency and reduce economic costs of the current and future transportation system. \cite{kenney2011}
 
 \section{Use-Cases}
 \subsection{Vehicle-to-Vehicle}
 \subsection{Vehicle-to-Infrastructure/Network}
 \subsection{Vehicle-to-Person}
 
+\section{Services}
+- Services can be grouped into 4 major categories: Infotainment, Traffic Efficency, Cooperative Driving \cite{kenney2011}
+
+- Infotainment:
+- usually non-driving related topics.
+- geo-realated advertisment
+- messaging
+- general media transfer, like internet services, netflix, etc.
+- Infotainment services are characterized by relatively low min- imum latency requirements (latency on the order of 500 - 1000 ms, minimum transmission frequency on the order of 1 Hz) and throughput comparable to conventional mobile broadband services, up to around 80 Mbp \cite{kenney2011}
+
+- Traffic Efficency:
+- Broad application, generally tries to optimize traffic flow \cite{kenney2011}
+- intersection timing handling
+- real time route planning and changing, dependent on current/live situtation
+- needs to exchange all information about current speed, current possition, as also destiny of a car
+- usually not safety critical \cite{kenney2011}
+- medium latency and throughput \cite{kenney2011}
+
+-Traffic Safety:
+- goal is to reduce frequency, severity of collision in our current transportation system, with regards vehicles involved.
+- need for critical decision making, coping with non-standard behaviour of traffic participants, increase safety of especially, cyclist, pedestrians
+- clearing roads for emergency cars
+- Including not only crash prevention, but also knowing when an inavoidable crash will happen (pre-crash sensing) and taking all needed steps to reduce the impact of that event \cite{kenney2011}
+- pre-crash sensing has highest requirements in this category: minimum round-trip latency of 50ms with 10Hz broadcast frequency \cite{kenney2011}.
+- requirements for troughput will increase in the future, up to 700 mbps between vanet nodes estimated \cite{kenney2011}
+- leads to a need for a high throughput, ultra reliable robust network.
 
 \section{V2X in LTE Networks}
 - use \cite{araniti2013}
@@ -275,7 +305,8 @@ Ffrom LTE point of view
 Something about new infrstucture
 
 \subsection{Requirements}
-Changed requirements
+
+
 \subsection{Services}
 
 \section{Other Access Technologies}
@@ -308,6 +339,11 @@ Changed requirements
 \subsection{Heterogeneous Network}
 - maybe something about our opinion if this solution is viable.
 - good source \cite{zheng2015}
+
+\subsection{Standardization}
+- While much of the technology involved in V2X communi- cation has been well-coordinated internationally, a number of regional differences have arisen. One of the most pointed dif- ference between the U.S. and EU V2X standards are the mes- sage sets defined for communication between vehicles \cite{kenney2011}
+- could be a problem for traveling, common standard would be necessary to enable easier production and easier traveling.
+- For detailed message evaluation see \cite{kenney2011}.
 
 \section{Conclusion}
 The conclusion goes here.

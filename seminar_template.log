@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.17)  21 MAY 2019 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.17)  22 MAY 2019 10:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -289,7 +289,13 @@ main-ing chal-lenges [Cite: machardy2018]
  []
 
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./seminar_template.bbl [2])
+[2]
+Overfull \hbox (2.99413pt too wide) in paragraph at lines 344--347
+[]\OT1/ptm/m/n/12 - While much of the tech-nol-ogy in-volved in V2X communi- ca
+tion has been well-coordinated
+ []
+
+(./seminar_template.bbl [3])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -301,24 +307,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3] (./seminar_template.aux) ) 
+[4] (./seminar_template.aux) ) 
 Here is how much of TeX's memory you used:
  2765 strings out of 492649
- 44967 string characters out of 6129621
- 119183 words of memory out of 5000000
+ 44961 string characters out of 6129621
+ 121183 words of memory out of 5000000
  6630 multiletter control sequences out of 15000+600000
  35832 words of font info for 69 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,5n,25p,363b,222s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,5n,25p,497b,224s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvi
 ps/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.p
 fb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
 ocal/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on seminar_template.pdf (3 pages, 54979 bytes).
+Output written on seminar_template.pdf (4 pages, 58319 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 34 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

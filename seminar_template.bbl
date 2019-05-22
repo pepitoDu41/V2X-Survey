@@ -51,13 +51,6 @@ K.~{Zheng}, Q.~{Zheng}, P.~{Chatzimisios}, W.~{Xiang}, and Y.~{Zhou},
   and solutions,'' \emph{IEEE Communications Surveys Tutorials}, vol.~17,
   no.~4, pp. 2377--2396, Fourthquarter 2015.
 
-\bibitem{karagiannis2011}
-G.~{Karagiannis}, O.~{Altintas}, E.~{Ekici}, G.~{Heijenk}, B.~{Jarupan},
-  K.~{Lin}, and T.~{Weil}, ``Vehicular networking: A survey and tutorial on
-  requirements, architectures, challenges, standards and solutions,''
-  \emph{IEEE Communications Surveys Tutorials}, vol.~13, no.~4, pp. 584--616,
-  Fourth 2011.
-
 \bibitem{lee2016}
 J.~{Lee}, Y.~{Kim}, Y.~{Kwak}, J.~{Zhang}, A.~{Papasakellariou}, T.~{Novlan},
   C.~{Sun}, and Y.~{Li}, ``Lte-advanced in 3gpp rel -13/14: an evolution toward
@@ -68,5 +61,10 @@ J.~{Lee}, Y.~{Kim}, Y.~{Kwak}, J.~{Zhang}, A.~{Papasakellariou}, T.~{Novlan},
 G.~{Araniti}, C.~{Campolo}, M.~{Condoluci}, A.~{Iera}, and A.~{Molinaro}, ``Lte
   for vehicular networking: a survey,'' \emph{IEEE Communications Magazine},
   vol.~51, no.~5, pp. 148--157, May 2013.
+
+\bibitem{boban2017}
+M.~Boban, A.~Kousaridas, K.~Manolakis, J.~Eichinger, and W.~Xu, ``Use cases,
+  requirements, and design considerations for 5g v2x,'' \emph{arXiv preprint
+  arXiv:1712.01754}, 2017.
 
 \end{thebibliography}
