@@ -13,8 +13,9 @@
     "graphicx"
     "makecell")
    (LaTeX-add-labels
-    "tab:table1"
-    "fig:boat1")
+    "tab:modulation_USDOT"
+    "fig:architecture_DSRC"
+    "tab:table1")
    (LaTeX-add-bibliographies
     "IEEEabrv"
     "references"))

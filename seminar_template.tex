@@ -247,7 +247,9 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 \item Heterogeneous Vehicular Networking: A Survey on Architecture, Challenges, and Solutions [Cite: zheng2015] \cite{zheng2015}
 \item LTE-advanced in 3GPP Rel -13/14: an evolution toward 5G [Cite: lee2016] \cite{lee2016}
 \item LTE for vehicular networking: a survey [Cite: araniti2013] \cite{araniti2013}
-  \item Use cases, requirements, and design considerations for 5G V2X [Cite: boban2017] \cite{boban2017}
+\item Use cases, requirements, and design considerations for 5G V2X [Cite: boban2017] \cite{boban2017}
+\item Design aspects for 5G V2X physical layer [Cite: boban2016] \cite{boban2016}
+  \item Non-Orthogonal Multiple Access for High-Reliable and Low-Latency V2X Communications in 5G Systems [Cite: di2017] \cite{di2017}
   \end{itemize}
 
 \section{Introduction}
@@ -290,6 +292,7 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 
 \section{V2X in LTE Networks}
 -  maybe  use \cite{araniti2013}
+
 \subsection{Network}
 Access Technologie from LTE point of vi
 
@@ -300,6 +303,9 @@ Ffrom LTE point of view
 
 \section{Evolution from LTE to 5G}
 - maybe use \cite{lee2016}
+- maybe use  \cite{boban2017}
+- maybe use \cite{boban2016}
+- maybe use \cite{di2017}
 
 \subsection{Network}
 Something about new infrstucture
@@ -317,18 +323,17 @@ As an amendment to the Wi-Fi specification 802.11 defined by the IEEE organisati
 As with most wireless communications synchronization is needed for communication in DSRC \cite{kenney2011}. With the lack of an central coordination entity routing of multi-hop is a hard task in VANET's when mobility of nodes is high. Due to the fastly changing topology of the network, routes can be already obsoleted when found i\cite{machardy2018}. To which degree this affects communication depends heavily on the used routing protocol.
 Another aspect in V2X communication is safety, as it is critical to have reliable communication partners. Users acting maliciously can spam the network or trying to insert wrong data into the network. DSRC uses a private key infrastructure for this aspect. Hereby a central authority distributes autonomous and temporal certificates to vehicles. Those are then used to sign messages. As malicious users can not be detected upfront there exist an entity, misbehaviour authority, which is entrusted with detecting malicious vehicles and adding them to a blacklist. For this system to work, vehicles need to regularly update their own list of blacklisted certificates. As this list can be relatively large, this system imposes requirements in terms of throughput and latency \cite{machardy2018}.
 
-Summarizing it can be said, that DSRC allows for an low-end-to-end latency, a flexible organisation of nodes and relatively low cost for deployment in the V2X use-case. But it also entails a number of issues, including throughput problems in congestion situations, security issues and difficulties to handle non-line-of-sight communication \cite{machardy2018}. The U.S. Government of Transportation (USGOT) already specified DSRC for deployment. In the following this specification is used exemplary.
+Summarizing it can be said, that DSRC allows for an low-end-to-end latency, a flexible organisation of nodes and relatively low cost for deployment in the V2X use-case. But it also entails a number of issues, including throughput problems in congestion situations, security issues and difficulties to handle non-line-of-sight communication \cite{machardy2018}. The U.S. Department of Transportation (USDOT) already specified DSRC for deployment. In the following this specification is used exemplary.
 
-\subsubsection*{Standardization U.S. Government of Transportation}
-- the following technical details are üall taken from the standardization from the USGOT and are not globally. But can be seen as examplary. for realisation for DSRC
-- OFDMA uses a 10 MHz channel in DSRC
--  Testing of DSRC in the U.S. has focused on 10 MHz channels, based on the desire to support many parallel types of applications, and on physical testing that suggests this width is well suited to the delay and Doppler spreads likely to be encountered in the vehicular environ- ment \cite{kenney2011}
-- for safety critival a braoder channel allows for less latency. But 20 MhZ channel have more noise.
-- multiple mudolation rates
+\subsubsection*{Standardization U.S. Department of Transportation}
+As an exemplary standardization the following proposal of the USDOT for V2X communication is taken. As the standardization entity is the U.S. Government, the choice are not compulsory, but rather shell show how a specification for DSRC can look like.
+The USDOT choose to 10 MHz channel, as a result of taken measurements. Those indicated that 10 MHz channel width is well suited to deal with delay problems and Doppler spreads \cite{kenney2011}. These have to be taken into account due to the different mobility properties of cars, compared to pedestrians.  Though safety critical messages can be faster transmitted, with respect to delay not bandwith, in broader channels (e.g. 20 MHz), those typically have more noise in vehicular environment \cite{kenney2011}.
+Similar to celleular networks DSRC uses orthogonal frequency-division multiple access (OFDMA) as its multiple access transmission technique. Hereby the proposition by the USDOT proposes multiple modulation rates \ref{tab:modulation_USDOT}.
+
 \begin{table}[h!]
   \begin{center}
     \caption{Modulation Options in DSRC 10 MHz OFDMA Channels. \cite{kenney2011}}
-    \label{tab:table1}
+    \label{tab:modulation_USDOT}
     \begin{tabular}{ccccc}
       \textbf{\makecell{Modulation \\ Technique}} & \textbf{\makecell{Coded \\ Bit Rate\\ (Mbpcs)}} & \textbf{\makecell{Coding \\ Rate}} & \textbf{\makecell{Data Rate \\ (Mbps)}} &\textbf{ \makecell{Data Bits\\ per \\OFDMA Symbol}}\\
       \hline
@@ -344,21 +349,15 @@ Summarizing it can be said, that DSRC allows for an low-end-to-end latency, a fl
     \end{tabular}
   \end{center}
 \end{table}
-- Forward error correction (FEC) coding is applied to the user bits, which reduces the effective user bit rate but also improves the probability of successful decoding
-- opertes in the 5.9 GHz spectrum.
-- Mac the traditional 802.11 functions of beacon- ing, synchronization, authentication, and association are not needed at the MAC sublayer for outside of contect bassic service set (OCB) communication
-- Timing Advertisement (TA) frame, which can be used to announce information about the sender’s time source. needed to sync
-- other functionalities are optionall and implemented at higher layers \cite{kenney2011}
-- most communication probably single hop, therefore new layer 3 protocol\cite{kenney2011}
-- also channel congestion is sicnificant concern for DSRC \cite{machardy2018}, efficency importatnt and new protocol goodd
-- new Layer 3 protocol that is efficient for these 1-hop transmissions: the WAVE Short Message Proto- col (WSMP). Packets sent using WSMP are referred to as WAVE Short Messages (WSMs).
-- authentication and encyrpion of messages is deinfed be WAVE and description ouf of scope.
+
+The coding used is forward error correction (FEC), which is less effective than turbo codes and therefore lowers the bit rate but has the positive property of increasing the probability of successful decoding of messages \cite{kenney2011}. As 802.11p does not define the frequency spectrum the USDOT allocated seven 10 MHz channels in the 5.9 GHz spectrum for V2X communication purposes. One aspect the DSRC technology also changes with respect to normal Wi-Fi systems is the medium access technology. As stated above the typically used CSMA/CA technique does not allow for a prioritization of messages, making it incompatible for V2X communication, as emergency situation impose a need for fast unscheduled transmissions. Therefore TMAC is used instead. This protocol misses the beaconing, synchronization, authentication and association functions of typical MAC and leaves this functionalities open for higher layers \cite{kenney2011}, making the MAC protocol simpler. Some kind of synchronization is still needed. TMAC uses Timing Advertisment (TA) frames which allow to propagate information about the time source of the sender. To allow a prioritization of messages, TMAC allows for ``more'' important messages to access the medium with a lower backoff interval, which implicitly leads to faster access and earlier transmissions.
+A further change compared to most protocol stacks is the new layer 3 protocol. While it is still possible to use the most commonly used protocols at this layer, e.g. TCP/IP (see \ref{fig:architecture_DSRC}), the USDOT mostly wants to WAVE short message protocol (WSMP) for network and transportation. The reason to change from TCP/IP is the overhead associated with it. Even a small change of header size can have an impact on performance in vehicular communication environments \cite{kenney2011} and more importantly as DSRC is vulnerable to throughput degradation in case of channel congestion, smaller packets are a way to cope with this problem\cite{machardy2018}, \cite{kenney2011}. As the description of DSRC here is only very briefly and shall serve for an easier comparison between C-V2X and DSRC, the authors refer to \cite{kenney2011} for a detailed view of a DSRC specification which includes authentication and encryption properties of messages by WAVE.
 
 \begin{figure} [h]
    \centering
   \includegraphics[width=0.5\linewidth]{_Graphics/layer_architecture_dsrc.png}
   \caption{Architecture of Layer Structure in DSRC (by USGOT). \cite{kenney2011}}
-  \label{fig:boat1}
+  \label{fig:architecture_DSRC}
 \end{figure}
 
 \subsection{Visible Light Communication}
