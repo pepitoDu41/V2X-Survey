@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.17)  23 MAY 2019 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.17)  24 MAY 2019 12:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -177,14 +177,7 @@ Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
 \c@nlinenum=\count98
 \TeXr@lab=\toks18
 )
-(./seminar_template.aux
-
-LaTeX Warning: Label `tab:table1' multiply defined.
-
-
-LaTeX Warning: Label `tab:modulation_USDOT' multiply defined.
-
-)
+(./seminar_template.aux)
 \openout1 = `seminar_template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 211.
@@ -312,44 +305,62 @@ Overfull \hbox (28.75935pt too wide) in paragraph at lines 243--244
 main-ing chal-lenges [Cite: machardy2018]
  []
 
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<_Graphics/lte_d2d_usecases.png, id=10, 846.16125pt x 471.7625pt>
-File: _Graphics/lte_d2d_usecases.png Graphic file (type png)
-<use _Graphics/lte_d2d_usecases.png>
-Package pdftex.def Info: _Graphics/lte_d2d_usecases.png  used on input line 309
-.
-(pdftex.def)             Requested size: 318.66948pt x 177.66634pt.
 
+Overfull \hbox (1.30516pt too wide) in paragraph at lines 254--255
+[]\OT1/ptm/m/n/12 Device-to-device com-mu-ni-ca-tions; func-tional prospects fo
+r LTE-advanced net-works [Cite:
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[2]
+<_Graphics/v2x_deployment_example.png, id=1, 625.33624pt x 417.56pt>
+File: _Graphics/v2x_deployment_example.png Graphic file (type png)
+<use _Graphics/v2x_deployment_example.png>
+Package pdftex.def Info: _Graphics/v2x_deployment_example.png  used on input li
+ne 265.
+(pdftex.def)             Requested size: 318.66948pt x 212.79349pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 331.
+(Font)              <9> on input line 279.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 331.
- [3 <./_Graphics/lte_d2d_usecases.png>] [4]
-<_Graphics/layer_architecture_dsrc.png, id=22, 787.94376pt x 770.88pt>
-File: _Graphics/layer_architecture_dsrc.png Graphic file (type png)
-<use _Graphics/layer_architecture_dsrc.png>
-Package pdftex.def Info: _Graphics/layer_architecture_dsrc.png  used on input l
-ine 397.
-(pdftex.def)             Requested size: 227.62206pt x 222.6908pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5]
+(Font)              <5> on input line 279.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6 <./_Graphics/layer_architecture_dsrc.png>]
-Overfull \hbox (2.99413pt too wide) in paragraph at lines 450--453
+[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2 <./_Graphics/v2x_deployment_example.png>]
+<_Graphics/lte_d2d_usecases.png, id=16, 846.16125pt x 471.7625pt>
+File: _Graphics/lte_d2d_usecases.png Graphic file (type png)
+<use _Graphics/lte_d2d_usecases.png>
+Package pdftex.def Info: _Graphics/lte_d2d_usecases.png  used on input line 332
+.
+(pdftex.def)             Requested size: 318.66948pt x 177.66634pt.
+ [3 <./_Graphics/lte_d2d_usecases.png>] [4]
+<_Graphics/lte_backendserver.png, id=24, 705.63625pt x 464.73625pt>
+File: _Graphics/lte_backendserver.png Graphic file (type png)
+<use _Graphics/lte_backendserver.png>
+Package pdftex.def Info: _Graphics/lte_backendserver.png  used on input line 37
+5.
+(pdftex.def)             Requested size: 273.14923pt x 179.89905pt.
+ [5 <./_Graphics/lte_backendserver.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6]
+<_Graphics/layer_architecture_dsrc.png, id=32, 787.94376pt x 770.88pt>
+File: _Graphics/layer_architecture_dsrc.png Graphic file (type png)
+<use _Graphics/layer_architecture_dsrc.png>
+Package pdftex.def Info: _Graphics/layer_architecture_dsrc.png  used on input l
+ine 442.
+(pdftex.def)             Requested size: 227.62206pt x 222.6908pt.
+ [7]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <./_Graphics/layer_architecture_dsrc.png>]
+Overfull \hbox (2.99413pt too wide) in paragraph at lines 500--503
 []\OT1/ptm/m/n/12 - While much of the tech-nol-ogy in-volved in V2X communi- ca
 tion has been well-coordinated
  []
 
-(./seminar_template.bbl [7])
+(./seminar_template.bbl [9])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -361,28 +372,24 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[8] (./seminar_template.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[10] (./seminar_template.aux) ) 
 Here is how much of TeX's memory you used:
- 3000 strings out of 492649
- 47826 string characters out of 6129621
- 136890 words of memory out of 5000000
- 6848 multiletter control sequences out of 15000+600000
+ 3017 strings out of 492649
+ 48343 string characters out of 6129621
+ 131900 words of memory out of 5000000
+ 6863 multiletter control sequences out of 15000+600000
  40653 words of font info for 76 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,18n,25p,1370b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/urw/times/utmri8a.pfb>
-Output written on seminar_template.pdf (8 pages, 297715 bytes).
+ 41i,17n,25p,1370b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dv
+ips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.
+pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on seminar_template.pdf (10 pages, 490943 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

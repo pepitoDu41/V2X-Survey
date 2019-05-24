@@ -13,6 +13,8 @@
     "boban2017"
     "boban2016"
     "di2017"
-    "gunes2014"))
+    "gunes2014"
+    "seo2016"
+    "doppler2009"))
  :bibtex)
 

@@ -78,6 +78,17 @@ B.~{Di}, L.~{Song}, Y.~{Li}, and G.~Y. {Li}, ``Non-orthogonal multiple access
   \emph{IEEE Journal on Selected Areas in Communications}, vol.~35, no.~10, pp.
   2383--2397, Oct 2017.
 
+\bibitem{seo2016}
+H.~{Seo}, K.~{Lee}, S.~{Yasukawa}, Y.~{Peng}, and P.~{Sartori}, ``Lte evolution
+  for vehicle-to-everything services,'' \emph{IEEE Communications Magazine},
+  vol.~54, no.~6, pp. 22--28, June 2016.
+
+\bibitem{doppler2009}
+K.~Doppler, M.~P. Rinne, P.~Janis, C.~Ribeiro, and K.~Hugl, ``Device-to-device
+  communications; functional prospects for lte-advanced networks,'' in
+  \emph{2009 IEEE International Conference on Communications Workshops}.\hskip
+  1em plus 0.5em minus 0.4em\relax IEEE, 2009, pp. 1--6.
+
 \bibitem{gunes2014}
 T.~T. Gunes, H.~Afifi \emph{et~al.}, ``Hybrid model for lte network-assisted
   d2d communications,'' in \emph{International Conference on Ad-Hoc Networks

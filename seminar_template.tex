@@ -251,6 +251,7 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 \item Design aspects for 5G V2X physical layer [Cite: boban2016] \cite{boban2016}
 \item Non-Orthogonal Multiple Access for High-Reliable and Low-Latency V2X Communications in 5G Systems [Cite: di2017] \cite{di2017}
 \item  LTE evolution for vehicle-to-everything services [Cite: seo2016] \cite{seo2016}
+  \item Device-to-device communications; functional prospects for LTE-advanced networks [Cite: doppler2009] \cite{doppler2009}
   \end{itemize}
 
 \section{Introduction}
@@ -259,12 +260,32 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 - Communication in V2X cases happens in a frequently changing vehicular ad-hoc networks (VANET)s, where nodes of the network leave and join the network at a specific location as frequently as the traffic floads. This VANET is supported by a static network. Nodes of this network a typically referred to as road side units (RSU), helping to coordinate non-static nodes communication traffic, distributing data and providing additional services \cite{machardy2018}.
 - V2X technology tries to increase safety, efficiency and reduce economic costs of the current and future transportation system. \cite{machardy2018}
 
+\begin{figure} [ht]
+   \centering
+   \includegraphics[width=0.7\linewidth]{_Graphics/v2x_deployment_example.png}
+  \caption{V2X Deployment Scenario. \cite{seo2016}}
+  \label{fig:v2x_deployment_example}
+\end{figure}
+
 \section{Use-Cases}
 \subsection{Vehicle-to-Vehicle}
 \subsection{Vehicle-to-Infrastructure/Network}
 \subsection{Vehicle-to-Person}
 
-\section{Services}
+\begin{table}[h!]
+  \begin{center}
+  \caption{V2X Services - Applications and Requirements}
+    \label{tab:V2X_services}
+    \begin{tabular}{ccc}
+      \textbf{\makecell{Service}} & \textbf{\makecell{Applications}} & \textbf{Requirements} \\
+      \hline
+      \textbf{\makecell{Infotainment}}& \makecell[c]{} & \\
+      \textbf{\makecell{Traffic Efficency}}& \makecell[c]{} & \\
+      \textbf{\makecell{Traffic Safety}}& \makecell[c]{} & \\
+       \textbf{\makecell{Cooperative Driving}}& \makecell[c]{} & \\
+    \end{tabular}
+  \end{center}
+\end{table}
 - Services can be grouped into 4 major categories: Infotainment, Traffic Efficency, Cooperative Driving \cite{machardy2018}
 
 - Infotainment:
@@ -294,6 +315,7 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 - Safety applications require periodic V2V data exchanges in a vehicle’s neighborhood (this is the case of CAMs) \cite{araniti2013}
 - event-triggered V2V and V2I communications (this is the case of DENMs). \cite{araniti2013}
 
+Cooperative Driving: Among the applications consid- ered by this paper, some (adaptive cruise control, cooperative platooning, etc.) are sometimes counted as part of traffic safety, above, and sometimes as a distinct fourth category: coopera- tive autonomous driving (see [60]). Though the case could be made that the requirements for these services are similar enough to traffic safety to merit inclusion in that category, because their requirements are particularly stringent and their applications uniquely suited to autonomous vehicle operation, we choose here to treat them separately. Co-operative platoon- ing (the very tight packing of a group of vehicles travelling in the same direction in a lane, see Figure 2), sometimes also captured under the label of Cooperative Adaptive Cruise Control (CACC), is a cooperative driving application with very strict requirements in terms of communication latency and frequency. Supporting cooperative driving services requires throughput on the order of 5 Mbps and latency as low as 2-10 ms [57], [61].
 
 \section{V2X in LTE Networks}
 -  maybe  use \cite{araniti2013}
@@ -305,7 +327,7 @@ The commnication over the Eutran can either take place via MBMS broadcast multic
 - Status mode of the device: Latency is also influenced by the status mode of the mobile termi- nal. In order to save resources, cellular networks are configured to keep non-active terminals in idle mode, but the connection setup necessary to switch to connected mode before sending data may take a longer time than the simple transmission delay.1 Vehicles should be in connected mode to send periodic CAMs, whereas the transmission of an event-triggered DENM could require a vehicle to switch from idle to connected mode. \cite{araniti2013}
 - CAM and DENM exchanges in LTE involve transmissions from vehicles to infrastructure nodes, and successive traffic distribution to the concerned vehicles. \cite{araniti2013} We can conclude therfore that typically most comminucation whcih is V2V is goging trhough the network.
 
-\begin{figure} [h]
+\begin{figure} [ht]
    \centering
    \includegraphics[width=0.7\linewidth]{_Graphics/lte_d2d_usecases.png}
   \caption{Possible D2D Connection Scenarios in LTE. \cite{gunes2014}}
@@ -314,6 +336,10 @@ The commnication over the Eutran can either take place via MBMS broadcast multic
 
 - downlink can be per user, choosing an appropritae lte channel using physcial downlink shared channel (PDSCH) for specific user based information unicast transmission and for broadcast the typical physical braodcast channel (PBCH)
 - NETWORK:  ETSI specifications foresee the presence of a special-purpose back-end server that supports geocasting, by intercepting traffic from vehicles and processing it before redis- tributing it only to the concerned vehicle(s) in a given geographical area \cite{araniti2013}
+- This is important as messages need to be delivered to vehicles in close proximity.
+- There are two possible options how a geo-server can be deployed. 1. in the EPC core network, this allows the server to use data from the MME module or in the internet. For option two it is possible two lower the amount of connections neeeded for UE, as the MME already is aware of the location and needs to track it anyways. When the internet holfs the server each car needs to hold an active connection to the server.
+- special backend server, which serves as an intelligent coordinator.
+- In order to identify the concerned vehicles in a given area and act as a reflector [7], the back-end server has to know the list of geographical areas, their coordinates, the cars in any area at all times, and their IP addresses and position
 - especially for infotainment Multimedia Broadcast Multicast Service (MBMS) and its associated physical channels can be used as it allows for nice resticted broadcast in given geographcal area, while it still has overhad for session setup \cite{lee2016} which restrict or even permits its use for low latency applications.
 - unicast messages also introduce a high overhead for the network as they have to be transmitted reduntlay thrugh multiple bearer connections, while a MBMS connection will ease the load of hte EPC network.
 - A main challenge for the network will be to handle high loads of periodic CAM, e.g. periodic status messages boradcasted to vehicles in close proximity, messages especially in dense areas, like cites \cite{lee2016}.
@@ -324,9 +350,32 @@ The commnication over the Eutran can either take place via MBMS broadcast multic
 - as serving cells and eNbs change quite frequently for vehicles driving with high velocity, handover processes take place more often. thus introducing more latency. But as many security feateures require very low latency (see \ref{tab:message_types}) under 100 ms, V2X should be resilient to latency ntroduced through handovers. \cite{seo2016}
 - challenge: traffic characteristics of CEM are different than natural cellular traffic, with peridoic and oftern but small packages \cite{seo2016}
 - D2D in Lte was primary defined for voice calls with tens user per cell \cite{seo2016} making it not perfectly fit to serve as V2V usage.
+- LTE-Advanced, if anysystem,  offers  opportunities  for  D2D  communications  due  toits time-frequency flexibility in allocations \cite{doppler2009}
 - LTE is especially applicable for V2I/N as its nature is typically point-to-multipoint, eMBMS perfetly suitable for this. USE CASES AUS VORLESUNG HIER \cite{seo2016}
 - still overhead and need to be in connected mode for eMBMS
 
+-cams are especially problematic, typically the are of broadcast nature resticted by geographical location of vehicles. as the messages will go through network and then be resdistributed to cars.
+- analyses show that LTE is not able to handle the load in dense areas if it restransmitts all messages \cite{araniti2013}
+- use of MBMS broadcasting in cell could ease load, but still in studies to heavy. They only checked for only CAM traffic without any other traffic \cite{araniti2013}.
+
+- dams are of different nature. only when hazard happens. Hereby it is important again to solve load on network, when many cars send redundant infomration. The backendserver needs to filter and agregate the redundand messages to one big one to allow neteowrk to handle load. \cite{araniti2013}
+- The central back end server can aggegrate knowledge out of multiple messages received, which is a strengt of the centralized system architecture \cite{araniti2013}
+- As an addi- tional benefit, the wide cellular coverage guaran- tees the event dissemination also when there is no nearby vehicle to relay the message. central architecture pro
+- interference management in D2D improtant
+- not natively in LTE, only in LTE-A via pc5 interface regarded
+
+- conclusoion for LTE
+In this case, the design of efficient schedulers is especially crucial for the uplink channel, which could be a bottleneck in densely populated net- works. On the downlink, instead, the effort is to provide efficient and reliable broadcasting that coexists with the conventional unicast mode. Closely linked to scheduling issues is the mapping of vehicular applications onto LTE QoS classes.
+- denms should be high
+- currently no devices specified for lte in v2x. as smarphones are everywhere, first idea, but battery contrained. so deciated devices in cars should be used. \cite{araniti2013}
+-
+
+\begin{figure} [ht]
+   \centering
+   \includegraphics[width=0.6\linewidth]{_Graphics/lte_backendserver.png}
+  \caption{Multicast CAM Delivery in LTE with Backend Server Coordinating Awareness Range. \cite{araniti2013}}
+  \label{fig:lte_backendserver}
+\end{figure}
 
 
 \begin{table}[h!]
@@ -350,21 +399,12 @@ The commnication over the Eutran can either take place via MBMS broadcast multic
 
 
 
-
-\subsection{Network}
-Something about new infrstucture
-
-\subsection{Requirements}
-
-
-\subsection{Services}
-
 \section{Other Access Technologies}
 The following section deals with access technologies for V2X communication besides or in cooperation with cellular networks. We will only refer to the access technologies itself, if at all mentioning the eventually necessary infrastructure only briefly.
 \subsection{Dedicated Short Range Communication}
 Most scientific papers refer to dedicated short range communication (DSRC) as systems using IEEE 802.11p and  IEEE 1609 (WAVE) standards together for communication\cite{machardy2018}. Hereby the 802.11p standard allows for a setup of vehicular ad-hoc networks (VANET's) taking care of the physical (PHY) layer and the medium access (MAC) layer while the WAVE standard defines networking and some application related parts like security and authentication.
 As an amendment to the Wi-Fi specification 802.11 defined by the IEEE organisation, 802.11p allows for inter device communication and is especially developed with V2X communication in mind. It facilitates the communication without the usual need for an basic service set (BSS, e.g. access point or something similar), allowing for D2D communication without a central coordinator \cite{machardy2018}. The standard itself does not define a specific operational frequencies, rather it defines the procedure of communication, leaving the choice of the used frequency to the authorities. As requirements for in V2X communication differ highly from typical Wi-Fi communication, 802.11p introduces a new medium access method called tiered contention multiple access (TMAC). This MAC technique allows for a prioritization of messages which is not possible with the typically used CSMA/CA technique \cite{machardy2018}. Especially for safety critical messages, relate to traffic safety like pre-crash sensing a prioritization of data flows is essential.
-As with most wireless communications synchronization is needed for communication in DSRC \cite{kenney2011}. With the lack of an central coordination entity routing of multi-hop is a hard task in VANET's when mobility of nodes is high. Due to the fastly changing topology of the network, routes can be already obsoleted when found i\cite{machardy2018}. To which degree this affects communication depends heavily on the used routing protocol.
+As with most wireless communications synchronization is needed for communication in DSRC \cite{kenney2011}. With the lack of an central coordination entity routing of multi-hop is a hard task in VANET's when mobility of nodes is high. Due to the fast changing topology of the network, routes can be already obsoleted when found i\cite{machardy2018}. To which degree this affects communication depends heavily on the used routing protocol.
 Another aspect in V2X communication is safety, as it is critical to have reliable communication partners. Users acting maliciously can spam the network or trying to insert wrong data into the network. DSRC uses a private key infrastructure for this aspect. Hereby a central authority distributes autonomous and temporal certificates to vehicles. Those are then used to sign messages. As malicious users can not be detected upfront there exist an entity, misbehaviour authority, which is entrusted with detecting malicious vehicles and adding them to a blacklist. For this system to work, vehicles need to regularly update their own list of blacklisted certificates. As this list can be relatively large, this system imposes requirements in terms of throughput and latency \cite{machardy2018}.
 
 Summarizing it can be said, that DSRC allows for an low-end-to-end latency, a flexible organisation of nodes and relatively low cost for deployment in the V2X use-case. But it also entails a number of issues, including throughput problems in congestion situations, security issues and difficulties to handle non-line-of-sight communication \cite{machardy2018}. The U.S. Department of Transportation (USDOT) already specified DSRC for deployment. In the following this specification is used exemplary.
@@ -397,7 +437,7 @@ Similar to celleular networks DSRC uses orthogonal frequency-division multiple a
 The coding used is forward error correction (FEC), which is less effective than turbo codes and therefore lowers the bit rate but has the positive property of increasing the probability of successful decoding of messages \cite{kenney2011}. As 802.11p does not define the frequency spectrum the USDOT allocated seven 10 MHz channels in the 5.9 GHz spectrum for V2X communication purposes. One aspect the DSRC technology also changes with respect to normal Wi-Fi systems is the medium access technology. As stated above the typically used CSMA/CA technique does not allow for a prioritization of messages, making it incompatible for V2X communication, as emergency situation impose a need for fast unscheduled transmissions. Therefore TMAC is used instead. This protocol misses the beaconing, synchronization, authentication and association functions of typical MAC and leaves this functionalities open for higher layers \cite{kenney2011}, making the MAC protocol simpler. Some kind of synchronization is still needed. TMAC uses Timing Advertisment (TA) frames which allow to propagate information about the time source of the sender. To allow a prioritization of messages, TMAC allows for ``more'' important messages to access the medium with a lower backoff interval, which implicitly leads to faster access and earlier transmissions.
 A further change compared to most protocol stacks is the new layer 3 protocol. While it is still possible to use the most commonly used protocols at this layer, e.g. TCP/IP (see \ref{fig:architecture_DSRC}), the USDOT mostly wants to WAVE short message protocol (WSMP) for network and transportation. The reason to change from TCP/IP is the overhead associated with it. Even a small change of header size can have an impact on performance in vehicular communication environments \cite{kenney2011} and more importantly as DSRC is vulnerable to throughput degradation in case of channel congestion, smaller packets are a way to cope with this problem\cite{machardy2018}, \cite{kenney2011}. As the description of DSRC here is only very briefly and shall serve for an easier comparison between C-V2X and DSRC, the authors refer to \cite{kenney2011} for a detailed view of a DSRC specification which includes authentication and encryption properties of messages by WAVE.
 
-\begin{figure} [h]
+\begin{figure} [ht]
    \centering
   \includegraphics[width=0.5\linewidth]{_Graphics/layer_architecture_dsrc.png}
   \caption{Architecture of Layer Structure in DSRC (by USGOT). \cite{kenney2011}}
@@ -427,10 +467,13 @@ algorithm, especially for the safety channe \cite{kenney2011}
 - higher market penetration and incentive for telecom companies to build infrastrcutre, etc. because they can get money from services offered \cite{lee2016}
 - above point might also be a bad one, cause some parts of the network are safety critical and should not be non supervised by the state.
 - 5G allows for different status mode of devices, where nodes are not disconnected when in idle, this reduces latency a lot and solves the issue that exist with this mode in LTE \cite{araniti2013}
+- Boradcasting in 802.11p is done via one single transmission in VANET, while in LTE network (5G I do not know) this is not possible. options are a) v2v for every car in proximity (latency probably to high, because of need for estabhlishing communication first) or b) via infrastructure, but then also the infrastructure will need to distribute the messages to relevant cars in proximity. \cite{araniti2013}
+- Meanwhile, effective business models should be specified to support the widespread use of LTE for cooperative ITS applications. No one would agree to pay unless highly reliable safety services and attractive traffic applications can be provided. \cite{araniti2013} Might also hold for 5G. No expensive hardware and traffic cost for signalign will be accepted if there is no use
+
 \begin{table}[h!]
   \begin{center}
   \caption{Summary of Challenges for C-V2X and 802.11p-based DSRC. \cite{machardy2018}}
-    \label{tab:table1}
+    \label{tab:summary_challenges_C-V2X_DSRC}
     \begin{tabular}{lll}
       \textbf{\makecell{KPI}} & \textbf{\makecell{802.11p-based DSRC}} & \textbf{\makecell{Cellular V2X}} \\
       \hline
@@ -443,6 +486,8 @@ algorithm, especially for the safety channe \cite{kenney2011}
     \end{tabular}
   \end{center}
 \end{table}
+
+
 \subsection{Bluetooth and VLC}
 - several other technologies, including Bluetooth, satellite radio, and visible light communications have been considered for use for V2X applications. While each of these technologies has features which make it potentially promis- ing, each also has some unavoidable limitations, as covered in Section III-D, \cite{machardy2018}
 
@@ -460,7 +505,7 @@ algorithm, especially for the safety channe \cite{kenney2011}
 \begin{table}[h!]
   \begin{center}
     \caption{V2X Main Candidates for Access Technology Properties. \cite{araniti2013}}
-    \label{tab:modulation_USDOT}
+    \label{tab:properties_V2X_candidates}
     \begin{tabular}{ccccc}
       \textbf{\makecell{Feature}} & \textbf{\makecell{802.11-p\\DSRC}} & \textbf{\makecell{LTE}} & \textbf{\makecell{LTE-A}} & \textbf{\makecell{5G}} \\
       \hline
