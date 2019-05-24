@@ -280,42 +280,16 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
     \begin{tabular}{ccc}
       \textbf{\makecell{Service}} & \textbf{\makecell{Applications}} & \textbf{Requirements} \\
       \hline
-      \textbf{\makecell{Infotainment}}& \makecell[c]{as} & \makecell[c]{as}\\
-      \textbf{\makecell{Traffic Efficency}}& \makecell[c]{asd} & \makecell[c]{asd} \\
-      \textbf{\makecell{Traffic Safety}}& \makecell[c]{asd} & \makecell[c]{asd} \\
-       \textbf{\makecell{Cooperative Driving}}& \makecell[c]{asd} & \makecell[c]{asd}\\
+      \textbf{\makecell{Infotainment}}& \makecell[c]{Geo-related advertisement\\ Messaging \\ Media transfer (i.e. Netflix)\\} & \makecell[c]{Low requirement for latency\\ (500-1000 ms)\\ Transm. frequency around 1 Hz\\ Throughput around 80 Mbps}\\
+      \\
+      \textbf{\makecell{Traffic Efficency}}& \makecell[c]{Optimizing traffic flow \\ Intersection timing \\ Real time route planning} & \makecell[c]{Constant information exchange\\ Usually not safety critical\\ Medium latency \\ Medium throughput} \\
+      \\
+      \textbf{\makecell{Traffic Safety}}& \makecell[c]{Reduce collsions \\ Reduce impact of collisions \\(Costs and casualties)} & \makecell[c]{Need for critical decisions\\Ultra reliable robust network\\ High latency and Throughput} \\
+      \\
+       \textbf{\makecell{Cooperative Driving}}& \makecell[c]{Cruise control\\ Cooperative platooning} & \makecell[c]{High frequency of exchange\\ Low latency (2-10 ms)\\ Throughput: Depends on use-case\\}\\
     \end{tabular}
   \end{center}
 \end{table}
-
-- Infotainment:
-- usually non-driving related topics.
-- geo-realated advertisment
-- messaging
-- general media transfer, like internet services, netflix, etc.
-- Infotainment services are characterized by relatively low min- imum latency requirements (latency on the order of 500 - 1000 ms, minimum transmission frequency on the order of 1 Hz) and throughput comparable to conventional mobile broadband services, up to around 80 Mbp \cite{machardy2018}
-
-- Traffic Efficency:
-- Broad application, generally tries to optimize traffic flow \cite{machardy2018}
-- intersection timing handling
-- real time route planning and changing, dependent on current/live situtation
-- needs to exchange all information about current speed, current possition, as also destiny of a car
-- usually not safety critical \cite{machardy2018}
-- medium latency and throughput \cite{machardy2018}
-
--Traffic Safety:
-- goal is to reduce frequency, severity of collision in our current transportation system, with regards vehicles involved.
-- need for critical decision making, coping with non-standard behaviour of traffic participants, increase safety of especially, cyclist, pedestrians
-- clearing roads for emergency cars
-- Including not only crash prevention, but also knowing when an inavoidable crash will happen (pre-crash sensing) and taking all needed steps to reduce the impact of that event \cite{machardy2018}
-- pre-crash sensing has highest requirements in this category: minimum round-trip latency of 50ms with 10Hz broadcast frequency \cite{machardy2018}.
-- requirements for troughput will increase in the future, up to 700 mbps between vanet nodes estimated \cite{machardy2018}
-- leads to a need for a high throughput, ultra reliable robust network.
-
-- Safety applications require periodic V2V data exchanges in a vehicle’s neighborhood (this is the case of CAMs) \cite{araniti2013}
-- event-triggered V2V and V2I communications (this is the case of DENMs). \cite{araniti2013}
-
-Cooperative Driving: Among the applications consid- ered by this paper, some (adaptive cruise control, cooperative platooning, etc.) are sometimes counted as part of traffic safety, above, and sometimes as a distinct fourth category: cooperative autonomous driving (). Though the case could be made that the requirements for these services are similar enough to traffic safety to merit inclusion in that category, because their requirements are particularly stringent and their applications uniquely suited to autonomous vehicle operation, we choose here to treat them separately. Co-operative platoon- ing (the very tight packing of a group of vehicles travelling in the same direction in a lane, see Figure 2), sometimes also captured under the label of Cooperative Adaptive Cruise Control (CACC), is a cooperative driving application with very strict requirements in terms of communication latency and frequency. Supporting cooperative driving services requires throughput on the order of 5 Mbps and latency as low as 2-10 ms .
 
 \section{V2X in LTE Networks}
 The possibility for V2X communication is firstly regarded an option in LTE for cellular networks. With an increasing densification of the cellular network and the growing capacity of LTE networks, V2X over cellular networks seemed to be an perfect choice at first sight. In the following we describe the current situation regarding V2X and LTE, highlighting the nature of V2X communication and the consequent problems for the current cellular network infrastructure.
