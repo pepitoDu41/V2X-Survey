@@ -13,6 +13,8 @@
     "graphicx"
     "makecell")
    (LaTeX-add-labels
+    "fig:lte_d2d_usecases"
+    "tab:message_types"
     "tab:modulation_USDOT"
     "fig:architecture_DSRC"
     "tab:table1")
