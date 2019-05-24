@@ -251,7 +251,7 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 \item Design aspects for 5G V2X physical layer [Cite: boban2016] \cite{boban2016}
 \item Non-Orthogonal Multiple Access for High-Reliable and Low-Latency V2X Communications in 5G Systems [Cite: di2017] \cite{di2017}
 \item  LTE evolution for vehicle-to-everything services [Cite: seo2016] \cite{seo2016}
-  \item Device-to-device communications; functional prospects for LTE-advanced networks [Cite: doppler2009] \cite{doppler2009}
+ \item Device-to-device communications; functional prospects for LTE-advanced networks [Cite: doppler2009] \cite{doppler2009}
   \end{itemize}
 
 \section{Introduction}
@@ -272,21 +272,21 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 \subsection{Vehicle-to-Infrastructure/Network}
 \subsection{Vehicle-to-Person}
 
+
 \begin{table}[h!]
   \begin{center}
-  \caption{V2X Services - Applications and Requirements}
+  \caption{V2X Services Grouped into Four Major Categories \cite{machardy2018} - Applications and Requirements}
     \label{tab:V2X_services}
     \begin{tabular}{ccc}
       \textbf{\makecell{Service}} & \textbf{\makecell{Applications}} & \textbf{Requirements} \\
       \hline
-      \textbf{\makecell{Infotainment}}& \makecell[c]{} & \\
-      \textbf{\makecell{Traffic Efficency}}& \makecell[c]{} & \\
-      \textbf{\makecell{Traffic Safety}}& \makecell[c]{} & \\
-       \textbf{\makecell{Cooperative Driving}}& \makecell[c]{} & \\
+      \textbf{\makecell{Infotainment}}& \makecell[c]{as} & \makecell[c]{as}\\
+      \textbf{\makecell{Traffic Efficency}}& \makecell[c]{asd} & \makecell[c]{asd} \\
+      \textbf{\makecell{Traffic Safety}}& \makecell[c]{asd} & \makecell[c]{asd} \\
+       \textbf{\makecell{Cooperative Driving}}& \makecell[c]{asd} & \makecell[c]{asd}\\
     \end{tabular}
   \end{center}
 \end{table}
-- Services can be grouped into 4 major categories: Infotainment, Traffic Efficency, Cooperative Driving \cite{machardy2018}
 
 - Infotainment:
 - usually non-driving related topics.
@@ -315,17 +315,10 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 - Safety applications require periodic V2V data exchanges in a vehicle’s neighborhood (this is the case of CAMs) \cite{araniti2013}
 - event-triggered V2V and V2I communications (this is the case of DENMs). \cite{araniti2013}
 
-Cooperative Driving: Among the applications consid- ered by this paper, some (adaptive cruise control, cooperative platooning, etc.) are sometimes counted as part of traffic safety, above, and sometimes as a distinct fourth category: coopera- tive autonomous driving (see [60]). Though the case could be made that the requirements for these services are similar enough to traffic safety to merit inclusion in that category, because their requirements are particularly stringent and their applications uniquely suited to autonomous vehicle operation, we choose here to treat them separately. Co-operative platoon- ing (the very tight packing of a group of vehicles travelling in the same direction in a lane, see Figure 2), sometimes also captured under the label of Cooperative Adaptive Cruise Control (CACC), is a cooperative driving application with very strict requirements in terms of communication latency and frequency. Supporting cooperative driving services requires throughput on the order of 5 Mbps and latency as low as 2-10 ms [57], [61].
+Cooperative Driving: Among the applications consid- ered by this paper, some (adaptive cruise control, cooperative platooning, etc.) are sometimes counted as part of traffic safety, above, and sometimes as a distinct fourth category: cooperative autonomous driving (). Though the case could be made that the requirements for these services are similar enough to traffic safety to merit inclusion in that category, because their requirements are particularly stringent and their applications uniquely suited to autonomous vehicle operation, we choose here to treat them separately. Co-operative platoon- ing (the very tight packing of a group of vehicles travelling in the same direction in a lane, see Figure 2), sometimes also captured under the label of Cooperative Adaptive Cruise Control (CACC), is a cooperative driving application with very strict requirements in terms of communication latency and frequency. Supporting cooperative driving services requires throughput on the order of 5 Mbps and latency as low as 2-10 ms .
 
 \section{V2X in LTE Networks}
--  maybe  use \cite{araniti2013}
-
-- there are two opions for V2X communication in LTE networks. Either use direct D2D communicaiton over the pc5 interface or vie the eutran radio interface. Both of the two options allow two ways of communication. D2D ofer pc5 has a mode where the eNB is the controlling instance, making scheduling and where the nodes communicate autonomsly in case of missing eNB connectivity allowing for communication even in RRC-idle mode.
-The commnication over the Eutran can either take place via MBMS broadcast multicast features or via unicast/boradast  using PUSCH and PDSCH channels
-
-- heavy load generated by periodic message transmissions from several vehicles strongly challenges LTE capacity and potentially penalizes the delivery of traditional applications. \cite{araniti2013}
-- Status mode of the device: Latency is also influenced by the status mode of the mobile termi- nal. In order to save resources, cellular networks are configured to keep non-active terminals in idle mode, but the connection setup necessary to switch to connected mode before sending data may take a longer time than the simple transmission delay.1 Vehicles should be in connected mode to send periodic CAMs, whereas the transmission of an event-triggered DENM could require a vehicle to switch from idle to connected mode. \cite{araniti2013}
-- CAM and DENM exchanges in LTE involve transmissions from vehicles to infrastructure nodes, and successive traffic distribution to the concerned vehicles. \cite{araniti2013} We can conclude therfore that typically most comminucation whcih is V2V is goging trhough the network.
+The possibility for V2X communication is firstly regarded an option in LTE for cellular networks. With an increasing densification of the cellular network and the growing capacity of LTE networks, V2X over cellular networks seemed to be an perfect choice at first sight. In the following we describe the current situation regarding V2X and LTE, highlighting the nature of V2X communication and the consequent problems for the current cellular network infrastructure.
 
 \begin{figure} [ht]
    \centering
@@ -334,41 +327,8 @@ The commnication over the Eutran can either take place via MBMS broadcast multic
   \label{fig:lte_d2d_usecases}
 \end{figure}
 
-- downlink can be per user, choosing an appropritae lte channel using physcial downlink shared channel (PDSCH) for specific user based information unicast transmission and for broadcast the typical physical braodcast channel (PBCH)
-- NETWORK:  ETSI specifications foresee the presence of a special-purpose back-end server that supports geocasting, by intercepting traffic from vehicles and processing it before redis- tributing it only to the concerned vehicle(s) in a given geographical area \cite{araniti2013}
-- This is important as messages need to be delivered to vehicles in close proximity.
-- There are two possible options how a geo-server can be deployed. 1. in the EPC core network, this allows the server to use data from the MME module or in the internet. For option two it is possible two lower the amount of connections neeeded for UE, as the MME already is aware of the location and needs to track it anyways. When the internet holfs the server each car needs to hold an active connection to the server.
-- special backend server, which serves as an intelligent coordinator.
-- In order to identify the concerned vehicles in a given area and act as a reflector [7], the back-end server has to know the list of geographical areas, their coordinates, the cars in any area at all times, and their IP addresses and position
-- especially for infotainment Multimedia Broadcast Multicast Service (MBMS) and its associated physical channels can be used as it allows for nice resticted broadcast in given geographcal area, while it still has overhad for session setup \cite{lee2016} which restrict or even permits its use for low latency applications.
-- unicast messages also introduce a high overhead for the network as they have to be transmitted reduntlay thrugh multiple bearer connections, while a MBMS connection will ease the load of hte EPC network.
-- A main challenge for the network will be to handle high loads of periodic CAM, e.g. periodic status messages boradcasted to vehicles in close proximity, messages especially in dense areas, like cites \cite{lee2016}.
-- here are mainly two technical challenges in ful- filling the V2X service requirements: high vehi- cle speed and high UE density. It is noteworthy that UE capability may be different for vehicles and pedestrians. \cite{seo2016}
-- Also, in the D2D- based V2V scenario, the transmitter and receiver may be driven at very high velocity in opposite directions, which reaches a very high relative velocity. With such high carrier frequency and relative velocity, Doppler effects, including fre- quency error and inter-carrier interference, and insufficient channel estimation due to shorter coherence time, become much more serious, and current PHY design may not satisfy all scenarios \cite{seo2016}
-- differnec of UE in cars and pedestrancs are different. One is battery restraint the other is not.
-- to cope with high doppler effects V2X changes the symbol configuration of RB, allowing for more RS signals to be embedded to reduce time intervall between reference signals \cite{seo2016}.
-- as serving cells and eNbs change quite frequently for vehicles driving with high velocity, handover processes take place more often. thus introducing more latency. But as many security feateures require very low latency (see \ref{tab:message_types}) under 100 ms, V2X should be resilient to latency ntroduced through handovers. \cite{seo2016}
-- challenge: traffic characteristics of CEM are different than natural cellular traffic, with peridoic and oftern but small packages \cite{seo2016}
-- D2D in Lte was primary defined for voice calls with tens user per cell \cite{seo2016} making it not perfectly fit to serve as V2V usage.
-- LTE-Advanced, if anysystem,  offers  opportunities  for  D2D  communications  due  toits time-frequency flexibility in allocations \cite{doppler2009}
-- LTE is especially applicable for V2I/N as its nature is typically point-to-multipoint, eMBMS perfetly suitable for this. USE CASES AUS VORLESUNG HIER \cite{seo2016}
-- still overhead and need to be in connected mode for eMBMS
-
--cams are especially problematic, typically the are of broadcast nature resticted by geographical location of vehicles. as the messages will go through network and then be resdistributed to cars.
-- analyses show that LTE is not able to handle the load in dense areas if it restransmitts all messages \cite{araniti2013}
-- use of MBMS broadcasting in cell could ease load, but still in studies to heavy. They only checked for only CAM traffic without any other traffic \cite{araniti2013}.
-
-- dams are of different nature. only when hazard happens. Hereby it is important again to solve load on network, when many cars send redundant infomration. The backendserver needs to filter and agregate the redundand messages to one big one to allow neteowrk to handle load. \cite{araniti2013}
-- The central back end server can aggegrate knowledge out of multiple messages received, which is a strengt of the centralized system architecture \cite{araniti2013}
-- As an addi- tional benefit, the wide cellular coverage guaran- tees the event dissemination also when there is no nearby vehicle to relay the message. central architecture pro
-- interference management in D2D improtant
-- not natively in LTE, only in LTE-A via pc5 interface regarded
-
-- conclusoion for LTE
-In this case, the design of efficient schedulers is especially crucial for the uplink channel, which could be a bottleneck in densely populated net- works. On the downlink, instead, the effort is to provide efficient and reliable broadcasting that coexists with the conventional unicast mode. Closely linked to scheduling issues is the mapping of vehicular applications onto LTE QoS classes.
-- denms should be high
-- currently no devices specified for lte in v2x. as smarphones are everywhere, first idea, but battery contrained. so deciated devices in cars should be used. \cite{araniti2013}
--
+LTE based systems offer to possibilities for V2X communication. Devices can either use direct D2D communication over the PC5 interface or use the E-UTRAN interface to connect to an eNB, shown as the red connections and the blue connection in figure \ref{fig:lte_d2d_usecases}. Furthermore these two options offer two ways to establish a connection. Every type of connection has its own properties. D2D communication typically allows for an direct connection between UE's in each other proximity. D2D connections offers two modes. One mode allows for an direct connection without the need of an eNB and is typically used when there is no network infrastructure close by (See figure \ref{fig:lte_d2d_usecases} red connection annotated with a 1). Hereby the UE's autonomously select resources to use for communication from an pool of frequencies know upfront and schedule their transmissions in an distributed manner. This kind of communication is similar to Wi-Fi and not naturally used in cellular networks therefore introducing additional protocols and sensing otherwise not used. The other mode offers an logical D2D communication by establishing an connection to another device via an eNB (See figure \ref{fig:lte_d2d_usecases} red connection annotated with a 2). As this procedure allows to use the natural cellular scheduling and allocation techniques but comes with the need of infrastructure. Additionally in contrast to direct D2D connections, an active RRC connection is needed in this case. Typically direct communication would only be used in case of missing eNB connectivity, but as most vehicular transmissions nature is of packages of small size but in heavy frequencies, this approach could ease the load for the infrastructure.
+The E-UTRAN interface also allows for two possible connection types. Packets can be transmitted via the normal physical uplink shared channel (PUSCH) and physical downlink shared channel (PDSCH) or use the evolved multimedia broadcast multicast service (eMBMS). If the communication takes place via D2D or the E-UTRAN depends on the situation and can be changed for downlink and uplink independently, making the system flexible.
 
 \begin{figure} [ht]
    \centering
@@ -377,6 +337,7 @@ In this case, the design of efficient schedulers is especially crucial for the u
   \label{fig:lte_backendserver}
 \end{figure}
 
+V2X communication foresees the periodic transmission of different data from an UE to the network and other UE. This includes speed, next action and different sensor data, like street condition, sight and so forth. Naturally these kind of information are not useful for every UE in the network. Therefore the ETSI defines the need for a special-purpose backend server \cite{araniti2013}. This server will take care of keeping a list where each UE is located in the network and other services like intelligent data analysis. As the server is aware where the devices are located geographically it can take incoming traffic from messages and redistribute them to vehicles who are in close proximity or for whom the information is valuable. An advanced case could be, if a car is scheduled to drive through an area of increasing traffic or where an accident happened, the server could notify the cars navigation system to use a different route. The backend server is a key element to fulfil future applications goals \cite{araniti2013}. There are two possible options how an backend server can be deployed. The first one is to deploy the server directly in the EPC network itself, this would allow the server to take the geographical information directly from the MME module inside the network. The second option is to deploy the server in the internet. The first option would reduce the amount of connections going through the network, as an server deployed in the internet would introduce the need of one active connection per UE to the server. In contrast to the MME module which even samples geographical data when the UE is in idle mode. To make use of this intelligent system most messages need to go through the network \cite{araniti2013} to allow for the backend server to analyse the data.
 
 \begin{table}[h!]
   \begin{center}
@@ -390,6 +351,12 @@ In this case, the design of efficient schedulers is especially crucial for the u
     \end{tabular}
   \end{center}
 \end{table}
+
+The two message types defined by the ETSI which are concerned with transmitting status updates and emergency information are called cooperative awareness message (CAM) and decentralized environmental notification message (DENM). CAM's are of periodic nature and introduce the most load to the network, DENM's on the other side occur in warning and emergency situations (Cf. table \ref{tab:message_types}). The traffic characteristics of CAM's and the need for latency for both CAM's and DENM's are challenging for LTE based networks \cite{seo2016}.
+LTE V2X foresees the usage of eMBMS to ease the load of the network and lower the amount of connections. Hereby vehicles would still use single connections in the uplink to distribute their CAM and DENM to network. As these messages will in most cases be filled with redundant information an intelligent server could accumulate the information and only redistribute a single message or an drastically lower amount of messages back to the vehicles, for whom the information are relevant. The nature of eMBMS if perfectly suited for this purpose at it allows for geographically restricted single to multipoint communications and even takes advantage of redundant transmissions of multiple eNB's \cite{araniti2013} resulting also in an lower latency.
+On the downside eMBMS needs an active session to be used, which could permit the usage of the same as latency is increased and might be to high as session setup takes time and one can not hold an active session all the time \cite{lee2016}. An example of the usage of eMBMS connections, an backend server which redistribute CAM's can be seen in figure \ref{fig:lte_backendserver}. As one can see, the received messages are sent through the network to the server, and after beeing analysed are send to the vehicles for whom the information is useful via eMBMS connections. As already mentioned above, the transmission characteristics of V2X communication, not taking into account infotainment services, is different to the common LTE services providing for example voice or message communication. Cars need to propagate their updated position, speed and sensor data, to name a few, periodically in the network (Cf. figure \ref{tab:message_types} CAM messages).These periodic messages can introduce a heavy load to the network especially in cities and at rush hours and does challenge the capacities of the LTE network. As a result limiting or preventing the usage of other services \cite{araniti2013}.
+
+Summarizing it can be seen that while LTE already allows for V2X communication there are many challenges to overcome. LTE is already applicable for V2I/N communication \cite{seo2016} and can already serve infotainment applications as proven by mobile phones, with limitations on availability. Improvement is needed in D2D communication, as LTE D2D communication was primary developed for voice calls with tens of users in mind not hundreds \cite{seo2016}. Furthermore the current system is not properly capable of handling Doppler effects, frequency errors and inter-carrier interference at high velocity of vehicles in every scenario, i.e. crossing vehicles on highways \cite{seo2016}. It can be stated that a future network need to be able to cope with high vehicle speed and high UE density which will be a main technical challenge \cite{seo2016} and to handle high loads of periodic messages without loosing its capability to serve other services \cite{lee2016} which at the moment is not possible \cite{lee2016}. Also for a save V2X communication the cellular network need to be able to handle handovers in a way, that they do not introduce significant latency, which otherwise leads to time with no communication abilities beeing dangerous as a result \cite{seo2016}.
 
 \section{Evolution from LTE to 5G}
 - maybe use \cite{lee2016}
@@ -469,6 +436,7 @@ algorithm, especially for the safety channe \cite{kenney2011}
 - 5G allows for different status mode of devices, where nodes are not disconnected when in idle, this reduces latency a lot and solves the issue that exist with this mode in LTE \cite{araniti2013}
 - Boradcasting in 802.11p is done via one single transmission in VANET, while in LTE network (5G I do not know) this is not possible. options are a) v2v for every car in proximity (latency probably to high, because of need for estabhlishing communication first) or b) via infrastructure, but then also the infrastructure will need to distribute the messages to relevant cars in proximity. \cite{araniti2013}
 - Meanwhile, effective business models should be specified to support the widespread use of LTE for cooperative ITS applications. No one would agree to pay unless highly reliable safety services and attractive traffic applications can be provided. \cite{araniti2013} Might also hold for 5G. No expensive hardware and traffic cost for signalign will be accepted if there is no use
+- The central back end server can aggegrate knowledge out of multiple messages received, which is a strengt of the centralized system architecture \cite{araniti2013}
 
 \begin{table}[h!]
   \begin{center}

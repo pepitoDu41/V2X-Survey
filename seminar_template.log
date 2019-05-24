@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.17)  24 MAY 2019 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.12.17)  24 MAY 2019 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -318,9 +318,9 @@ Package pdftex.def Info: _Graphics/v2x_deployment_example.png  used on input li
 ne 265.
 (pdftex.def)             Requested size: 318.66948pt x 212.79349pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 279.
+(Font)              <9> on input line 280.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 279.
+(Font)              <5> on input line 280.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -329,36 +329,39 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <_Graphics/lte_d2d_usecases.png, id=16, 846.16125pt x 471.7625pt>
 File: _Graphics/lte_d2d_usecases.png Graphic file (type png)
 <use _Graphics/lte_d2d_usecases.png>
-Package pdftex.def Info: _Graphics/lte_d2d_usecases.png  used on input line 332
+Package pdftex.def Info: _Graphics/lte_d2d_usecases.png  used on input line 325
 .
 (pdftex.def)             Requested size: 318.66948pt x 177.66634pt.
- [3 <./_Graphics/lte_d2d_usecases.png>] [4]
-<_Graphics/lte_backendserver.png, id=24, 705.63625pt x 464.73625pt>
+ [3 <./_Graphics/lte_d2d_usecases.png>]
+<_Graphics/lte_backendserver.png, id=21, 705.63625pt x 464.73625pt>
 File: _Graphics/lte_backendserver.png Graphic file (type png)
 <use _Graphics/lte_backendserver.png>
-Package pdftex.def Info: _Graphics/lte_backendserver.png  used on input line 37
+Package pdftex.def Info: _Graphics/lte_backendserver.png  used on input line 33
 5.
 (pdftex.def)             Requested size: 273.14923pt x 179.89905pt.
- [5 <./_Graphics/lte_backendserver.png>]
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6]
+[4 <./_Graphics/lte_backendserver.png>] [5] [6]
 <_Graphics/layer_architecture_dsrc.png, id=32, 787.94376pt x 770.88pt>
 File: _Graphics/layer_architecture_dsrc.png Graphic file (type png)
 <use _Graphics/layer_architecture_dsrc.png>
 Package pdftex.def Info: _Graphics/layer_architecture_dsrc.png  used on input l
-ine 442.
+ine 409.
 (pdftex.def)             Requested size: 227.62206pt x 222.6908pt.
  [7]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [8 <./_Graphics/layer_architecture_dsrc.png>]
-Overfull \hbox (2.99413pt too wide) in paragraph at lines 500--503
+Overfull \hbox (2.99413pt too wide) in paragraph at lines 468--471
 []\OT1/ptm/m/n/12 - While much of the tech-nol-ogy in-volved in V2X communi- ca
 tion has been well-coordinated
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 (./seminar_template.bbl [9])
 
@@ -376,17 +379,17 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  3017 strings out of 492649
  48343 string characters out of 6129621
- 131900 words of memory out of 5000000
+ 133901 words of memory out of 5000000
  6863 multiletter control sequences out of 15000+600000
  40653 words of font info for 76 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,17n,25p,1370b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,17n,25p,1830b,344s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dv
 ips/base/8r.enc}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.
 pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
 local/texlive/2018/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on seminar_template.pdf (10 pages, 490943 bytes).
+Output written on seminar_template.pdf (10 pages, 491511 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream
