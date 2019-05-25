@@ -95,4 +95,46 @@ T.~T. Gunes, H.~Afifi \emph{et~al.}, ``Hybrid model for lte network-assisted
   and Wireless}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2014, pp.
   100--113.
 
+\bibitem{rost2016mobile}
+P.~Rost, A.~Banchs, I.~Berberana, M.~Breitbach, M.~Doll, H.~Droste,
+  C.~Mannweiler, M.~A. Puente, K.~Samdanis, and B.~Sayadi, ``Mobile network
+  architecture evolution toward 5g,'' \emph{IEEE Communications Magazine},
+  vol.~54, no.~5, pp. 84--91, 2016.
+
+\bibitem{karagiannis2011}
+G.~{Karagiannis}, O.~{Altintas}, E.~{Ekici}, G.~{Heijenk}, B.~{Jarupan},
+  K.~{Lin}, and T.~{Weil}, ``Vehicular networking: A survey and tutorial on
+  requirements, architectures, challenges, standards and solutions,''
+  \emph{IEEE Communications Surveys Tutorials}, vol.~13, no.~4, pp. 584--616,
+  Fourth 2011.
+
+\bibitem{campolo2017}
+C.~{Campolo}, A.~{Molinaro}, A.~{Iera}, and F.~{Menichella}, ``5g network
+  slicing for vehicle-to-everything services,'' \emph{IEEE Wireless
+  Communications}, vol.~24, no.~6, pp. 38--45, Dec 2017.
+
+\bibitem{va2016millimeter}
+V.~Va, T.~Shimizu, G.~Bansal, R.~W. Heath~Jr \emph{et~al.}, ``Millimeter wave
+  vehicular communications: A survey,'' \emph{Foundations and
+  Trends{\textregistered} in Networking}, vol.~10, no.~1, pp. 1--113, 2016.
+
+\bibitem{roberts2010}
+R.~{Roberts}, P.~{Gopalakrishnan}, and S.~{Rathi}, ``Visible light positioning:
+  Automotive use case,'' in \emph{2010 IEEE Vehicular Networking Conference},
+  Dec 2010, pp. 309--314.
+
+\bibitem{yu2013}
+S.~{Yu}, O.~{Shih}, H.~{Tsai}, N.~{Wisitpongphan}, and R.~D. {Roberts}, ``Smart
+  automotive lighting for vehicle safety,'' \emph{IEEE Communications
+  Magazine}, vol.~51, no.~12, pp. 50--59, December 2013.
+
+\bibitem{rangan2014millimeter}
+S.~Rangan, T.~S. Rappaport, and E.~Erkip, ``Millimeter wave cellular wireless
+  networks: Potentials and challenges,'' \emph{arXiv preprint arXiv:1401.2560},
+  2014.
+
+\bibitem{5gamericas2018}
+5GAmericas, ``White paper: Cellular v2x communications towards 5g,'' \emph{5G
+  Americas White Papers}, 2018.
+
 \end{thebibliography}

@@ -1,6 +1,7 @@
 \documentclass[conference,12pt,onecolumn]{IEEEtran}
 \usepackage[a4paper, left=2.5cm, right=2.5cm, bottom=2cm, top=2.5cm]{geometry}
 \usepackage{graphicx}
+\usepackage[utf8]{inputenc}
 
 \usepackage{makecell}
 % Some very useful LaTeX packages include:
@@ -222,9 +223,9 @@
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Hugo Rummlinger, Frederik Schulz, Theo DDDDDDD, Anthony DDDDDDD}
-\IEEEauthorblockA{Universitat Politecnica de Cataluna\\
-Master of Science\\
+\author{\IEEEauthorblockN{Hugo Rummlinger, Frederik Schulz, Theo Mamone, Anthony Dell'Eva}
+\IEEEauthorblockA{Universitat Politècnica de Catalunya\\
+Master degree in Telecommunications Engineering\\
 5G Mobile Communication Systems}}
 
 
@@ -267,7 +268,7 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
   \label{fig:v2x_deployment_example}
 \end{figure}
 
-\section{Use-Cases}
+\section{Use-Cases} use \cite{boban2017} for 5G requirements and \cite{5gamericas2018} pag.24
 \subsection{Vehicle-to-Vehicle}
 \subsection{Vehicle-to-Infrastructure/Network}
 \subsection{Vehicle-to-Person}
@@ -282,7 +283,7 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
       \hline
       \textbf{\makecell{Infotainment}}& \makecell[c]{Geo-related advertisement\\ Messaging \\ Media transfer (i.e. Netflix)\\} & \makecell[c]{Low requirement for latency\\ (500-1000 ms)\\ Transm. frequency around 1 Hz\\ Throughput around 80 Mbps}\\
       \\
-      \textbf{\makecell{Traffic Efficency}}& \makecell[c]{Optimizing traffic flow \\ Intersection timing \\ Real time route planning} & \makecell[c]{Constant information exchange\\ Usually not safety critical\\ Medium latency \\ Medium throughput} \\
+      \textbf{\makecell{Traffic Efficiency}}& \makecell[c]{Optimizing traffic flow \\ Intersection timing \\ Real time route planning} & \makecell[c]{Constant information exchange\\ Usually not safety critical\\ Medium latency \\ Medium throughput} \\
       \\
       \textbf{\makecell{Traffic Safety}}& \makecell[c]{Reduce collsions \\ Reduce impact of collisions \\(Costs and casualties)} & \makecell[c]{Need for critical decisions\\Ultra reliable robust network\\ High latency and Throughput} \\
       \\
@@ -292,7 +293,7 @@ In the abstract, you write 2-3 paragraphs which summarize the key parts of your 
 \end{table}
 
 \section{V2X in LTE Networks}
-The possibility for V2X communication is firstly regarded an option in LTE for cellular networks. With an increasing densification of the cellular network and the growing capacity of LTE networks, V2X over cellular networks seemed to be an perfect choice at first sight. In the following we describe the current situation regarding V2X and LTE, highlighting the nature of V2X communication and the consequent problems for the current cellular network infrastructure.
+The possibility for V2X communication is firstly regarded an option in LTE for cellular networks. With an increasing densification of the cellular network and the growing capacity of LTE networks, V2X over cellular networks seemed to be a perfect choice at first sight. In the following we describe the current situation regarding V2X and LTE, highlighting the nature of V2X communication and the consequent problems for the current cellular network infrastructure.
 
 \begin{figure} [ht]
    \centering
@@ -338,6 +339,39 @@ Summarizing it can be seen that while LTE already allows for V2X communication t
 - maybe use \cite{boban2016}
 - maybe use \cite{di2017}
 
+The following section describes the main network evolutions introduced by 5G in order to support new services and requirements. Starting from a brief overview of the novel architectural principles, the attention is then focused on the applications of the new paradigms to the V2X scenario.
+
+The need for an LTE EPS enhancement toward a flexible mobile architecture has been triggered by the birth of new services such as Internet of Things (Iot), eHealth and, precisely, Vehicular-to-everything (V2X). Maintaining backward compatibility, the evolved architecture must support not only legacy radio technologies, but also new radio access methodologies such as millimetre-wave (mmWave) transmissions. Furthermore, it has to be able to integrate different processing models such as cloud RAN (C-RAN) and mobile edge computing (MEC), while allowing deployments  based on microcells and macrocells and the support to very diverse use cases and requirements in terms of throughput and latency, as explained in the above sections.
+
+The fundamental objectives, which are the multi-service and context-aware adaptation and the multi-tenancy of the mobile network, are achieved thanks to the following functionalities \cite{rost2016mobile}:
+\begin{itemize}
+\item \textbf{Network of functions}: the architecture is service-based, i.e. the specification focuses on the services rather than the nodes. This is in  line with the use of NFV (Network Function Virtualization) for implementing core network functions.
+\item \textbf{Network slicing}: the infrastructure is flexible and can be customized thanks to different virtual subnetworks optimized for the specific use case.
+\item \textbf{Software-defined mobile network}: programmable control of a flexible network of functions as well as a set of network slices. This allows to adapt the network behaviour to the current requirements. It is in line with the split of the control and user planes, which enables independent and scalability evolution.
+\end{itemize}
+
+\subsection*{New radio technologies}
+The novel radio technologies that are envisioned as components of a 5G network providing V2X services and which should be integrated with the technologies already exploited in LTE such as Cellular V2X (LTE-V) and DSCR (IEEE 802.11p protocol suite), are the following \cite{boban2017}:
+\begin{itemize}
+\item \textbf{Millimeter-wave communication}. It is very attractive from the data throughput point of view but it has crucial challenges on the physical layer perspective, due to its high propagation path loss and its sensitivity to shadowing. Furthermore, in the 50-60 GHz band, the Doppler effect is a major drawback since it is linear in the carrier frequency: new solutions have to be set up, such as special frame design and numerology. 
+
+These effects make the mmWave communication suitable for mostly short range (not more than few hundred meters) and point to point line of sight (LOS) transmissions \cite{rangan2014millimeter}. In particular, it can bring advantages for both V2I communications, establishing short-timed high data rates connections in order to exchange information which are insensitive to delay, such as traffic data for large scale traffic monitoring in the uplink and infotainment data and maps updates in the downlink, and V2V communications, supporting the exchange of messages between vehicles in a platoon \cite{va2016millimeter}. In fact, radio signals can be used for position estimation: the achievable accuracy for 5G networks is considerably higher than the one achievable for legacy LTE networks, thanks to the higher signal bandwidth and the deployments based on micro cells, which make the network nature denser and enable LOS with high probability.
+
+
+\item \textbf{Vehicular Visible Light Communication (VVLC)}. Even if not direcly correlated to the evolution of the 5G networks and their relative technologies, VVLC could be introduced in the new V2X solutions.
+
+ VVLC configuration is composed by light emitting diodes (LEDs) in vehicles headlights and taillights, which are used to transmit information, and by photo diodes or cameras, which work as receivers. The cost of adding VVLC capability to cars is limited to only inexpensive circuitry that permits the communication. This makes it suitable for low cost installations as, for example, scooters or cheap cars that cannot cover expensive systems in the price. Furthermore, VVLC has centimeter-precision relative positioning capability, thanks to the dual configuration (headlight/taillight) and the known dimensions of the vehicles \cite{roberts2010}, which is exploited as a useful complement to satellite-based positioning systems, that have only meter-precision capability. This characteristic makes the technology suitable for manoeuvres which require high precision positioning, such as parking.
+
+The performances include a range of 50m and a bitrate up to 2 Mb/s at 50m and more than 500 Mb/s at 5m \cite{yu2013}. Finally, the separated configuration of transmitter (LEDs) and receiver (photo diode/camera), enables full duplex communication.
+\end{itemize}
+
+\cite{5gamericas2018}
+
+
+
+
+
+
 
 
 \section{Other Access Technologies}
@@ -353,14 +387,14 @@ Summarizing it can be said, that DSRC allows for an low-end-to-end latency, a fl
 \subsubsection*{Standardization U.S. Department of Transportation}
 As an exemplary standardization the following proposal of the USDOT for V2X communication is taken. As the standardization entity is the U.S. Government, the choice are not compulsory, but rather shell show how a specification for DSRC can look like.
 The USDOT choose to 10 MHz channel, as a result of taken measurements. Those indicated that 10 MHz channel width is well suited to deal with delay problems and Doppler spreads \cite{kenney2011}. These have to be taken into account due to the different mobility properties of cars, compared to pedestrians.  Though safety critical messages can be faster transmitted, with respect to delay not bandwith, in broader channels (e.g. 20 MHz), those typically have more noise in vehicular environment \cite{kenney2011}.
-Similar to celleular networks DSRC uses orthogonal frequency-division multiple access (OFDMA) as its multiple access transmission technique. Hereby the proposition by the USDOT proposes multiple modulation rates \ref{tab:modulation_USDOT}.
+Similar to cellular networks DSRC uses orthogonal frequency-division multiple access (OFDMA) as its multiple access transmission technique. Hereby the proposition by the USDOT proposes multiple modulation rates \ref{tab:modulation_USDOT}.
 
 \begin{table}[h!]
   \begin{center}
     \caption{Modulation Options in DSRC 10 MHz OFDMA Channels. \cite{kenney2011}}
     \label{tab:modulation_USDOT}
     \begin{tabular}{ccccc}
-      \textbf{\makecell{Modulation \\ Technique}} & \textbf{\makecell{Coded \\ Bit Rate\\ (Mbpcs)}} & \textbf{\makecell{Coding \\ Rate}} & \textbf{\makecell{Data Rate \\ (Mbps)}} &\textbf{ \makecell{Data Bits\\ per \\OFDMA Symbol}}\\
+      \textbf{\makecell{Modulation \\ Technique}} & \textbf{\makecell{Coded \\ Bit Rate\\ (Mbps)}} & \textbf{\makecell{Coding \\ Rate}} & \textbf{\makecell{Data Rate \\ (Mbps)}} &\textbf{ \makecell{Data Bits\\ per \\OFDMA Symbol}}\\
       \hline
       BPSK &6 & 1/2 &3 &24\\
       BPSK&6 &3/4&4.5&36\\
@@ -398,7 +432,7 @@ A further change compared to most protocol stacks is the new layer 3 protocol. W
 - Latency is a major obstacle for C-V2X deployment. Services with high need for time sensitivity, e.g. cooperative platooning or pre-crash sensing need low latency \cite{machardy2018}
 - Relate here somehow to Ultra Reliable Low Latency stuff from lecture.
 - How is price determined in DSRC?
-- Dependency of network connectivity should be able to be done by D2D sidelink without eNB or gNB beeing available. Source here.
+- Dependency of network connectivity should be able to be done by D2D sidelink without eNB or gNB being available. Source here.
 - Would D2D sidelink also solve latency issues?
 - evelopment of a Channel Congestion Control
 algorithm, especially for the safety channe \cite{kenney2011}
@@ -438,9 +472,13 @@ algorithm, especially for the safety channe \cite{kenney2011}
 - good source \cite{zheng2015}
 - Choice of wireless technology need not be an either-or proposition; many analyses have shown that a het- erogeneous solution can outperform either technology alone \cite{machardy2018}
 
+\subsection{GAP ANALYSIS AND ARCHITECTURAL ASPECTS
+TOWARDS 5G V2X---change title}
+\cite{boban2017} pag.7 
+
 \subsection{Standardization}
 - While much of the technology involved in V2X communi- cation has been well-coordinated internationally, a number of regional differences have arisen. One of the most pointed dif- ference between the U.S. and EU V2X standards are the mes- sage sets defined for communication between vehicles \cite{machardy2018}
-- could be a problem for traveling, common standard would be necessary to enable easier production and easier traveling.
+- could be a problem for travelling, common standard would be necessary to enable easier production and easier traveling.
 - For detailed message evaluation see \cite{machardy2018}.
 
 
@@ -453,7 +491,7 @@ algorithm, especially for the safety channe \cite{kenney2011}
       \hline
       \textit{Channel Width} & 20 MHz & 1.4, 3, 5, 10, 15, 20 MHz & Up to 100 MHz & ???\\
       \textit{Frequency Band(s)} & 5.86-5.92 GHz &700-2690 MHz  & 450 MHz-4.99 GHz  & ???\\
-      \textit{Bit Rate} & 3-27 Mbps & Upt to 300 Mbps & Up to 1 Gbps & ???\\
+      \textit{Bit Rate} & 3-27 Mbps & Up to 300 Mbps & Up to 1 Gbps & ???\\
       \textit{Range} & Up to 1 km & Up to 30 km & Up to 30 km & ???\\
       \textit{Capacity} & Medium & High & Very High & ???\\
       \textit{Coverage} & Intermittent & Ubiquitous & Ubiquitous & ???\\
@@ -511,7 +549,9 @@ The conclusion goes here.
 %  \end{center}
 %\end{table}
 
+\nocite{*}
 \bibliographystyle{IEEEtran} %the IEEtran file. You should not modify this file
+
 \bibliography{IEEEabrv,references}
 
 %references.bib is the name of the file where I wrote the references in .bib format
