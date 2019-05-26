@@ -89,6 +89,10 @@ K.~Doppler, M.~P. Rinne, P.~Janis, C.~Ribeiro, and K.~Hugl, ``Device-to-device
   \emph{2009 IEEE International Conference on Communications Workshops}.\hskip
   1em plus 0.5em minus 0.4em\relax IEEE, 2009, pp. 1--6.
 
+\bibitem{5gamericas2018}
+5GAmericas, ``White paper: Cellular v2x communications towards 5g,'' \emph{5G
+  Americas White Papers}, 2018.
+
 \bibitem{gunes2014}
 T.~T. Gunes, H.~Afifi \emph{et~al.}, ``Hybrid model for lte network-assisted
   d2d communications,'' in \emph{International Conference on Ad-Hoc Networks
@@ -101,17 +105,10 @@ P.~Rost, A.~Banchs, I.~Berberana, M.~Breitbach, M.~Doll, H.~Droste,
   architecture evolution toward 5g,'' \emph{IEEE Communications Magazine},
   vol.~54, no.~5, pp. 84--91, 2016.
 
-\bibitem{karagiannis2011}
-G.~{Karagiannis}, O.~{Altintas}, E.~{Ekici}, G.~{Heijenk}, B.~{Jarupan},
-  K.~{Lin}, and T.~{Weil}, ``Vehicular networking: A survey and tutorial on
-  requirements, architectures, challenges, standards and solutions,''
-  \emph{IEEE Communications Surveys Tutorials}, vol.~13, no.~4, pp. 584--616,
-  Fourth 2011.
-
-\bibitem{campolo2017}
-C.~{Campolo}, A.~{Molinaro}, A.~{Iera}, and F.~{Menichella}, ``5g network
-  slicing for vehicle-to-everything services,'' \emph{IEEE Wireless
-  Communications}, vol.~24, no.~6, pp. 38--45, Dec 2017.
+\bibitem{rangan2014millimeter}
+S.~Rangan, T.~S. Rappaport, and E.~Erkip, ``Millimeter wave cellular wireless
+  networks: Potentials and challenges,'' \emph{arXiv preprint arXiv:1401.2560},
+  2014.
 
 \bibitem{va2016millimeter}
 V.~Va, T.~Shimizu, G.~Bansal, R.~W. Heath~Jr \emph{et~al.}, ``Millimeter wave
@@ -128,13 +125,26 @@ S.~{Yu}, O.~{Shih}, H.~{Tsai}, N.~{Wisitpongphan}, and R.~D. {Roberts}, ``Smart
   automotive lighting for vehicle safety,'' \emph{IEEE Communications
   Magazine}, vol.~51, no.~12, pp. 50--59, December 2013.
 
-\bibitem{rangan2014millimeter}
-S.~Rangan, T.~S. Rappaport, and E.~Erkip, ``Millimeter wave cellular wireless
-  networks: Potentials and challenges,'' \emph{arXiv preprint arXiv:1401.2560},
-  2014.
+\bibitem{chen2017vehicle}
+S.~Chen, J.~Hu, Y.~Shi, Y.~Peng, J.~Fang, R.~Zhao, and L.~Zhao,
+  ``Vehicle-to-everything (v2x) services supported by lte-based systems and
+  5g,'' \emph{IEEE Communications Standards Magazine}, vol.~1, no.~2, pp.
+  70--76, 2017.
 
-\bibitem{5gamericas2018}
-5GAmericas, ``White paper: Cellular v2x communications towards 5g,'' \emph{5G
-  Americas White Papers}, 2018.
+\bibitem{5GAAwhite}
+5GAA-Automotive-Association, ``White paper: Timeline for deployment of c-v2x
+  – update,'' \emph{5GAA White Papers}, 2019.
+
+\bibitem{karagiannis2011}
+G.~{Karagiannis}, O.~{Altintas}, E.~{Ekici}, G.~{Heijenk}, B.~{Jarupan},
+  K.~{Lin}, and T.~{Weil}, ``Vehicular networking: A survey and tutorial on
+  requirements, architectures, challenges, standards and solutions,''
+  \emph{IEEE Communications Surveys Tutorials}, vol.~13, no.~4, pp. 584--616,
+  Fourth 2011.
+
+\bibitem{campolo2017}
+C.~{Campolo}, A.~{Molinaro}, A.~{Iera}, and F.~{Menichella}, ``5g network
+  slicing for vehicle-to-everything services,'' \emph{IEEE Wireless
+  Communications}, vol.~24, no.~6, pp. 38--45, Dec 2017.
 
 \end{thebibliography}
