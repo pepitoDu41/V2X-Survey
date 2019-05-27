@@ -223,10 +223,11 @@
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Hugo Rummlinger, Frederik Schulz, Theo Mamone, Anthony Dell'Eva}
+\author{\IEEEauthorblockN{Hugo Rummlinger, Frederik Schulz, Anthony Dell'Eva, Theo Mamone}
 \IEEEauthorblockA{Universitat Politècnica de Catalunya\\
 Master degree in Telecommunications Engineering\\
-5G Mobile Communication Systems}}
+5G Mobile Communication Systems\\
+May 2019}}
 
 
 % make the title area
@@ -334,10 +335,6 @@ On the downside eMBMS needs an active session to be used, which could permit the
 Summarizing it can be seen that while LTE already allows for V2X communication there are many challenges to overcome. LTE is already applicable for V2I/N communication \cite{seo2016} and can already serve infotainment applications as proven by mobile phones, with limitations on availability. Improvement is needed in D2D communication, as LTE D2D communication was primary developed for voice calls with tens of users in mind not hundreds \cite{seo2016}. Furthermore the current system is not properly capable of handling Doppler effects, frequency errors and inter-carrier interference at high velocity of vehicles in every scenario, i.e. crossing vehicles on highways \cite{seo2016}. It can be stated that a future network need to be able to cope with high vehicle speed and high UE density which will be a main technical challenge \cite{seo2016} and to handle high loads of periodic messages without loosing its capability to serve other services \cite{lee2016} which at the moment is not possible \cite{lee2016}. Also for a save V2X communication the cellular network need to be able to handle handovers in a way, that they do not introduce significant latency, which otherwise leads to time with no communication abilities beeing dangerous as a result \cite{seo2016}.
 
 \section{Evolution from LTE to 5G}
-- maybe use \cite{lee2016}
-- maybe use  \cite{boban2017}
-- maybe use \cite{boban2016}
-- maybe use \cite{di2017}
 
 The following section describes the main network evolutions introduced by 5G in order to support new services and requirements. Starting from a brief overview of the novel architectural principles, the attention is then focused on the applications of the new paradigms to the V2X scenario.
 
@@ -350,42 +347,61 @@ The fundamental objectives, which are the multi-service and context-aware adapta
 \item \textbf{Software-defined mobile network}: programmable control of a flexible network of functions as well as a set of network slices. This allows to adapt the network behaviour to the current requirements. It is in line with the split of the control and user planes, which enables independent and scalability evolution.
 \end{itemize}
 
-\subsection*{New radio technologies}
-The novel radio technologies that are envisioned as components of a 5G network providing V2X services and which should be integrated with the technologies already exploited in LTE such as Cellular V2X (LTE-V) and DSCR (IEEE 802.11p protocol suite), are the following \cite{boban2017}:
-\begin{itemize}
-\item \textbf{Millimeter-wave communication}. It is very attractive from the data throughput point of view but it has crucial challenges on the physical layer perspective, due to its high propagation path loss and its sensitivity to shadowing. Furthermore, in the 50-60 GHz band, the Doppler effect is a major drawback since it is linear in the carrier frequency: new solutions have to be set up, such as special frame design and numerology. 
+\subsection*{New radio technology}
+The novel radio technology that is envisioned as a component of a 5G network providing V2X services and which should be integrated with the technologies already exploited in LTE such as Cellular V2X (LTE-V) and DSCR (IEEE 802.11p protocol suite), is the millimeter-wave (mmWave) communication \cite{boban2017}. Despite it is very attractive from the data throughput point of view, it has crucial challenges on the physical layer perspective, due to its high propagation path loss and its sensitivity to shadowing. Furthermore, in the 50-60 GHz band, the Doppler effect is a major drawback since it is linear in the carrier frequency: new solutions have to be set up, such as special frame design and numerology. 
 
 These effects make the mmWave communication suitable for mostly short range (not more than few hundred meters) and point to point line of sight (LOS) transmissions \cite{rangan2014millimeter}. In particular, it can bring advantages for both V2I communications, establishing short-timed high data rates connections in order to exchange information which are insensitive to delay, such as traffic data for large scale traffic monitoring in the uplink and infotainment data and maps updates in the downlink, and V2V communications, supporting the exchange of messages between vehicles in a platoon \cite{va2016millimeter}. In fact, radio signals can be used for position estimation: the achievable accuracy for 5G networks is considerably higher than the one achievable for legacy LTE networks, thanks to the higher signal bandwidth and the deployments based on micro cells, which make the network nature denser and enable LOS with high probability.
 
+To overcome the challenges created by the mmWave communication, solutions such as beamforming, intelligent tracking algorithms, tight integration with sub-6GHz bands and coordinated scheduling for interference management have to be implemented, as shown in fig. \ref{fig:mmWave}.
 
-\item \textbf{Vehicular Visible Light Communication (VVLC)}. Even if not direcly correlated to the evolution of the 5G networks and their relative technologies, VVLC could be introduced in the new V2X solutions.
+\begin{figure}[hb]
+   \centering
+  \includegraphics[width=0.9\linewidth]{_Graphics/mmWave.png}
+  \caption{Millimeter wave communication scenario. (source: Qualcomm)}
+  \label{fig:mmWave}
+\end{figure}
 
- VVLC configuration is composed by light emitting diodes (LEDs) in vehicles headlights and taillights, which are used to transmit information, and by photo diodes or cameras, which work as receivers. The cost of adding VVLC capability to cars is limited to only inexpensive circuitry that permits the communication. This makes it suitable for low cost installations as, for example, scooters or cheap cars that cannot cover expensive systems in the price. Furthermore, VVLC has centimeter-precision relative positioning capability, thanks to the dual configuration (headlight/taillight) and the known dimensions of the vehicles \cite{roberts2010}, which is exploited as a useful complement to satellite-based positioning systems, that have only meter-precision capability. This characteristic makes the technology suitable for manoeuvres which require high precision positioning, such as parking.
 
-The performances include a range of 50m and a bitrate up to 2 Mb/s at 50m and more than 500 Mb/s at 5m \cite{yu2013}. Finally, the separated configuration of transmitter (LEDs) and receiver (photo diode/camera), enables full duplex communication.
-\end{itemize}
+
 
 \subsection*{How to deal with new use cases and requirements}
 As described before, the new use cases, such as advanced driving, remote driving, platooning and extended sensors, require eV2X to have robust reliability, high data rates, low latency and large communication range even in scenarios with high density. Despite the different solutions have not been standardized yet (Rel-16, the next phase of the global 5G-NR standard, will include the first specification for 5G-NR C-V2X and in expected to come into force in the first half of 2020), the general guidelines have been determined.  The appropriate enhancements have been proposed with 5G downlink, uplink and sidelink communications, including for example Ultra-Reliable Low latency Communications (URLLC) sidelink and Uu (interface between the User Equipment and the RAN) and enhanced Mobile Broadband (eMBB) sidelink.
 
 In particular, the solutions for the 5G-NR higher layers should include these features: mobility management, congestion control, QoS management and switching control between Uu and PC5 sidelink. Furthermore, because of the several different Radio Access Technologies (RATs) existing simultaneously,  coexistence and efficient inter-working mechanisms have to be implemented \cite{chen2017vehicle}.
 
-Next 3GPP releases are not expected to enable direct communication between vehicle with cellular technology, because 3GPP Rel-14 have already introduced V2X to transmit simple safety messages between cars. More specifically, C-V2X communication extends the vehicle's ability to see in bad weather conditions and at blind intersections, and is used as a complement for the capabilities of other passive sensors such as camera systems, radar and lidar. C-V2X specifications of Rel-16 5G-NR will enhance this capability to the next level enabling vehicles to share much more information like intent, which allows for a more efficient path planning, richer sensor data, pedestrian presence and roadway infrastructure details. Therefore, autonomous and coordinated driving use cases will be improved: from a technology that targets only basic safety in Rel-14, we will have direct multicast communication technology for increased surroundings awareness, advanced safety, faster travel time and energy savings. 
+Next 3GPP releases are not expected to enable direct communication between vehicle with cellular technology, because 3GPP Rel-14/Rel-15 have already introduced V2X to transmit simple safety messages between cars. More specifically, C-V2X communication extends the vehicle's ability to see in bad weather conditions and at blind intersections, and is used as a complement for the capabilities of other passive sensors such as camera systems, radar and lidar. C-V2X specifications of Rel-16 5G-NR will enhance this capability to the next level enabling vehicles to share much more information like intent, which allows for a more efficient path planning, richer sensor data, pedestrian presence and roadway infrastructure details. Therefore, autonomous and coordinated driving use cases will be improved: from a technology that targets only basic safety in Rel-14, we will have direct multicast communication technology for increased surroundings awareness, advanced safety, faster travel time and energy savings. 
 
-5G NR C-V2X builds upon the powerful features standardized for 4G and 5G. The first version of 5G to be launched commercially this spring and standardized in Rel-15 introduces a flexible numerology that 5G NR C-V2X builds upon; one example is the ability to adapt reference signal density based on speed, to allow for significantly higher data rates at very high vehicle speeds. We have estimated a spectral efficiency increase of up to 3.5 times at high speeds, which will benefit new automotive use cases, such as richer sensor sharing between vehicles and infrastructure.
+5G-NR C-V2X will be built upon the characteristics standardized for 4G and 5G. In particular, the first version (Phase-1) of 5G, launched commercially this spring and standardized in 3GPP Rel-15, introduces a flexible numerology that 5G-NR C-V2X will exploit. For instance, the considerably higher data rates achieved at very high speeds will be allowed thanks to the capability to adapt reference signal density based on speed. The spectral efficiency improvement is estimated to be up to 3.5 times at high speeds, bringing significant benefits to the new automotive use cases.
 
-5G NR C-V2X has several fundamental enhancements at the radio level that are unique to the technology. Rel-16 will be the first 5G standard to include sidelink — a 5G-based direct vehicle-to-everything communication. This will set the framework for future 5G NR sidelink enhancements for other applications in smartphones and in other verticals, such as public safety, building on the work Qualcomm Technologies pioneered for LTE Direct, which happened to be the foundation for Rel-14 C-V2X. 5G NR C-V2X utilizes the framework developed for Rel-14 C-V2X such that vehicles on the road using Rel-14 C-V2X will be able to communicate with newer vehicles which will have both Rel-14 C-V2X and Rel-16 5G NR C-V2X.
+3GPP Rel-16 will be the first 5G standard to include the sidelink, a 5G based direct V2X communication, similar to what LTE Direct (pioneered by Qualcomm Technologies works) was for Rel-14. Although the introduction of enhancements at the radio level will be unique for the technology, 5G-NR C-V2X  will use the same framework developed for Rel-14 C-V2X, in order to guarantee backward compatibility between newer and older vehicles that will use devices based on Rel-16 and Rel-14, respectively.
+
+The evolution of C-V2X technology towards 5G is summarized in figure \ref{fig:evolution}. The different functionalities available with current and future 3GPP releases are shown and the importance of the backward compatibility concept is highlighted. As already explained, Rel-14 (including C-V2X direct communications) is a crucial milestone because it was the result of the collaboration between automotive and telecommunication fields to standardize solutions for a specific industry segment. 3GPP Rel-15 introduced 5G NR capabilities maintaining a certain continuity with 4G LTE. In particular, the most important enhancements regard the network communication at the Uu interface and the provisioning of lower latencies and higher data rates for V2N communications. Minor enhancements have been included to the direct communication radio interface (PC5), such as transmit diversity, using MIMO solutions to increase reliability of communication, and high order modulations (e.g. 64 QAM) \cite{5GAAwhite}. The expectation by 5GAA on the date the start chipsets supporting 5G NR will be available is during 2019 (the same for the testing in vehicles). Therefore, first deployments are expected in early 2021. 
+
+3GPP Rel-16 provides significant improvements in bandwidth, latency and reliability in order to satisfy the needs of the new use cases (enhanced safety, cooperative automated driving, high quality infotainment etc.). It introduces additional capability to 5G NR, in particular in for what regards short range direct communication, where the results obtained from an increased bandwidth and a reduced latency is usually referred to as Ultra Reliable Low Latency Communications (URLLC). It is important to take into consideration that the features offered by 5G NR C-V2X (from Rel-16) which enable highly automated and cooperative driving are not possible in other V2V and V2I technologies such as 802.11p. 
+
+First deployments supporting 3GPP Rel-16 are expected during 2023 at the earliest. The future chipsets and their associated communication stacks will integrate the two different radio technologies, even if physical radio layers of LTE and 5G NR are very dissimilar. This will allow smooth operations and the already cited backward compatibility at service level.
+
+
+
+\begin{figure}[ht]
+   \centering
+  \includegraphics[width=0.9\linewidth]{_Graphics/evolution_timeline.png}
+  \caption{C-V2X evolution towards 5G. \cite{5GAAwhite}}
+  \label{fig:evolution}
+\end{figure}
+
+
+
+One of the most interesting thing to notice is that a new paradigm of vehicle communication design is needed. Nowadays, indeed, devices adapt the transmission parameters (modulation, coding, etc.) based on the measurements regarding the quality of the signal transmitted by fixed based stations. In C-V2X direct communication the new challenge is due to the lack of base stations and to the constant movements of the vehicles. In this case, the signal quality alone may not be useful to determine which vehicles are the most relevant in the specific circumstance. If there is a car around the corner of an intersection with poor signal power, but it is close enough to be relevant to your car, the two vehicles should be able to exchange reliable messages and sensor data independently of whether they are in direct view (LOS) or on a road intersection behind a building (NLOS), as shown in Figure \ref{fig:intersection}. Therefore, the new paradigm has to go beyond the adaptation to the signal quality alone. The 5G design (especially in C-V2X) is being done considering that the lower layers in 5G-NR (physical and MAC) need to be distance-aware. For instance, vehicles will transmit back acknowledgements, like hybrid ARQ ACK/NACK for retransmissions, only in the case they are within a certain distance from the transmitter and only if the information is pertinent to the vehicle. The new distance-aware approach can solve the hidden node problem described above and, overall, it enables a more reliable multicast communication and a higher system capacity because resources are not wasted by performing communications between vehicles that do not need certain information.
+
+Similar to Rel-14/Rel-15 C-V2X, 5G-NR C-V2X is expected to use the 5.9 GHz ITS band, which has been allocated in United States, Europe and Chine for automotive use. 5G-NR C-V2X will use channels in the band different than those used for Rel-14/Rel-15 C-V2X \cite{5GAAwhite}.
 
 \begin{figure} [ht]
    \centering
   \includegraphics[width=0.5\linewidth]{_Graphics/intersection.png}
-  \caption{Intersection NLOS view. \cite{5gamericas2018}}
+  \caption{Intersection with NLOS view. \cite{5gamericas2018}}
   \label{fig:intersection}
 \end{figure}
-
-One of the most interesting thing to notice is that a new paradigm of vehicle communication design is needed. Nowadays, indeed, devices adapt the transmission parameters (modulation, coding, etc.) based on the measurements regarding the quality of the signal transmitted by fixed based stations. In C-V2X direct communication the new challenge is due to the lack of base stations and to the constant movements of the vehicles. In this case, the signal quality alone may not be useful to determine which vehicles are the most relevant in the specific circumstance. If there is a car around the corner of an intersection with poor signal power, but it is close enough to be relevant to your car, the two vehicles should be able to exchange reliable messages and sensor data independently of whether they are in direct view (LOS) or on a road intersection behind a building (NLOS), as shown in Figure \ref{fig:intersection}. Therefore, the new paradigm has to go beyond the adaptation to the signal quality alone. The 5G design (especially in C-V2X) is being done considering that the lower layers in 5G-NR (physical and MAC) need to be distance-aware. For instance, vehicles will transmit back acknowledgements, like hybrid ARQ ACK/NACK for retransmissions, only in the case they are within a certain distance from the transmitter and only if the information is pertinent to the vehicle. The new distance-aware approach can solve the hidden node problem described above and, overall, it enables a more reliable multicast communication and a higher system capacity because resources are not wasted by performing communications between vehicles that do not need certain information.
-
-Similar to Rel-14 C-V2X, 5G-NR C-V2X is expected to use the 5.9 GHz ITS band, which has been allocated in United States, Europe and Chine for automotive use. 5G-NR C-V2X will use channels in the band different than those used for Rel-14 C-V2X. \cite{5GAAwhite}
 
 
 
@@ -438,6 +454,13 @@ A further change compared to most protocol stacks is the new layer 3 protocol. W
 \end{figure}
 
 \subsection{Visible Light Communication}
+
+
+\textbf{Vehicular Visible Light Communication (VVLC)}. Even if not direcly correlated to the evolution of the 5G networks and their relative technologies, VVLC could be introduced in the new V2X solutions.
+
+ VVLC configuration is composed by light emitting diodes (LEDs) in vehicles headlights and taillights, which are used to transmit information, and by photo diodes or cameras, which work as receivers. The cost of adding VVLC capability to cars is limited to only inexpensive circuitry that permits the communication. This makes it suitable for low cost installations as, for example, scooters or cheap cars that cannot cover expensive systems in the price. Furthermore, VVLC has centimeter-precision relative positioning capability, thanks to the dual configuration (headlight/taillight) and the known dimensions of the vehicles \cite{roberts2010}, which is exploited as a useful complement to satellite-based positioning systems, that have only meter-precision capability. This characteristic makes the technology suitable for manoeuvres which require high precision positioning, such as parking.
+
+The performances include a range of 50m and a bitrate up to 2 Mb/s at 50m and more than 500 Mb/s at 5m \cite{yu2013}. Finally, the separated configuration of transmitter (LEDs) and receiver (photo diode/camera), enables full duplex communication.
 \subsection{Bluetooth}
 
 \section{Results and Discussion}
