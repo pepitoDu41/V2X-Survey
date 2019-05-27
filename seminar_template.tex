@@ -227,7 +227,7 @@
 \IEEEauthorblockA{Universitat Politècnica de Catalunya\\
 Master degree in Telecommunications Engineering\\
 5G Mobile Communication Systems\\
-May 2019}}
+May, 2019}}
 
 
 % make the title area
@@ -362,8 +362,6 @@ To overcome the challenges created by the mmWave communication, solutions such a
 \end{figure}
 
 
-
-
 \subsection*{How to deal with new use cases and requirements}
 As described before, the new use cases, such as advanced driving, remote driving, platooning and extended sensors, require eV2X to have robust reliability, high data rates, low latency and large communication range even in scenarios with high density. Despite the different solutions have not been standardized yet (Rel-16, the next phase of the global 5G-NR standard, will include the first specification for 5G-NR C-V2X and in expected to come into force in the first half of 2020), the general guidelines have been determined.  The appropriate enhancements have been proposed with 5G downlink, uplink and sidelink communications, including for example Ultra-Reliable Low latency Communications (URLLC) sidelink and Uu (interface between the User Equipment and the RAN) and enhanced Mobile Broadband (eMBB) sidelink.
 
@@ -375,7 +373,7 @@ Next 3GPP releases are not expected to enable direct communication between vehic
 
 3GPP Rel-16 will be the first 5G standard to include the sidelink, a 5G based direct V2X communication, similar to what LTE Direct (pioneered by Qualcomm Technologies works) was for Rel-14. Although the introduction of enhancements at the radio level will be unique for the technology, 5G-NR C-V2X  will use the same framework developed for Rel-14 C-V2X, in order to guarantee backward compatibility between newer and older vehicles that will use devices based on Rel-16 and Rel-14, respectively.
 
-The evolution of C-V2X technology towards 5G is summarized in figure \ref{fig:evolution}. The different functionalities available with current and future 3GPP releases are shown and the importance of the backward compatibility concept is highlighted. As already explained, Rel-14 (including C-V2X direct communications) is a crucial milestone because it was the result of the collaboration between automotive and telecommunication fields to standardize solutions for a specific industry segment. 3GPP Rel-15 introduced 5G NR capabilities maintaining a certain continuity with 4G LTE. In particular, the most important enhancements regard the network communication at the Uu interface and the provisioning of lower latencies and higher data rates for V2N communications. Minor enhancements have been included to the direct communication radio interface (PC5), such as transmit diversity, using MIMO solutions to increase reliability of communication, and high order modulations (e.g. 64 QAM) \cite{5GAAwhite}. The expectation by 5GAA on the date the start chipsets supporting 5G NR will be available is during 2019 (the same for the testing in vehicles). Therefore, first deployments are expected in early 2021. 
+The evolution of C-V2X technology towards 5G is summarized in figure \ref{fig:evolution}. The different functionalities available with current and future 3GPP releases are shown and the importance of the backward compatibility concept is highlighted. As already explained, Rel-14 (including C-V2X direct communications) is a crucial milestone because it was the result of the collaboration between automotive and telecommunication fields to standardize solutions for a specific industry segment. 3GPP Rel-15 introduced 5G NR capabilities maintaining a certain continuity with 4G LTE. In particular, the most important enhancements regard the network communication at the Uu interface and the provisioning of lower latencies and higher data rates for V2N communications. Minor enhancements have been included to the direct communication radio interface (PC5), such as transmit diversity, using MIMO solutions to increase the reliability of communication, and high order modulations (e.g. 64 QAM) \cite{5GAAwhite}. The expectation by 5GAA on the date the start chipsets supporting 5G NR will be available is during 2019 (the same for the testing in vehicles). Therefore, first deployments are expected in early 2021. 
 
 3GPP Rel-16 provides significant improvements in bandwidth, latency and reliability in order to satisfy the needs of the new use cases (enhanced safety, cooperative automated driving, high quality infotainment etc.). It introduces additional capability to 5G NR, in particular in for what regards short range direct communication, where the results obtained from an increased bandwidth and a reduced latency is usually referred to as Ultra Reliable Low Latency Communications (URLLC). It is important to take into consideration that the features offered by 5G NR C-V2X (from Rel-16) which enable highly automated and cooperative driving are not possible in other V2V and V2I technologies such as 802.11p. 
 
@@ -392,7 +390,7 @@ First deployments supporting 3GPP Rel-16 are expected during 2023 at the earlies
 
 
 
-One of the most interesting thing to notice is that a new paradigm of vehicle communication design is needed. Nowadays, indeed, devices adapt the transmission parameters (modulation, coding, etc.) based on the measurements regarding the quality of the signal transmitted by fixed based stations. In C-V2X direct communication the new challenge is due to the lack of base stations and to the constant movements of the vehicles. In this case, the signal quality alone may not be useful to determine which vehicles are the most relevant in the specific circumstance. If there is a car around the corner of an intersection with poor signal power, but it is close enough to be relevant to your car, the two vehicles should be able to exchange reliable messages and sensor data independently of whether they are in direct view (LOS) or on a road intersection behind a building (NLOS), as shown in Figure \ref{fig:intersection}. Therefore, the new paradigm has to go beyond the adaptation to the signal quality alone. The 5G design (especially in C-V2X) is being done considering that the lower layers in 5G-NR (physical and MAC) need to be distance-aware. For instance, vehicles will transmit back acknowledgements, like hybrid ARQ ACK/NACK for retransmissions, only in the case they are within a certain distance from the transmitter and only if the information is pertinent to the vehicle. The new distance-aware approach can solve the hidden node problem described above and, overall, it enables a more reliable multicast communication and a higher system capacity because resources are not wasted by performing communications between vehicles that do not need certain information.
+One of the most interesting thing to notice is that a new paradigm of vehicle communication design is needed. Nowadays, indeed, devices adapt the transmission parameters (modulation, coding, etc.) based on the measurements regarding the quality of the signal transmitted by fixed base stations. In C-V2X direct communication the new challenge is due to the lack of base stations and to the constant movements of the vehicles. In this case, the signal quality alone may not be useful to determine which vehicles are the most relevant in the specific circumstance. If there is a car around the corner of an intersection with poor signal power, but it is close enough to be relevant to your car, the two vehicles should be able to exchange reliable messages and sensor data independently of whether they are in direct view (LOS) or on a road intersection behind a building (NLOS), as shown in Figure \ref{fig:intersection}. Therefore, the new paradigm has to go beyond the adaptation to the signal quality alone. The 5G design (especially in C-V2X) is being done considering that the lower layers in 5G-NR (physical and MAC) need to be distance-aware. For instance, vehicles will transmit back acknowledgements, like hybrid ARQ ACK/NACK for retransmissions, only in the case they are within a certain distance from the transmitter and only if the information is pertinent to the vehicle. The new distance-aware approach can solve the hidden node problem described above and, overall, it enables a more reliable multicast communication and a higher system capacity because resources are not wasted by performing communications between vehicles that do not need certain information.
 
 Similar to Rel-14/Rel-15 C-V2X, 5G-NR C-V2X is expected to use the 5.9 GHz ITS band, which has been allocated in United States, Europe and Chine for automotive use. 5G-NR C-V2X will use channels in the band different than those used for Rel-14/Rel-15 C-V2X \cite{5GAAwhite}.
 
@@ -404,6 +402,50 @@ Similar to Rel-14/Rel-15 C-V2X, 5G-NR C-V2X is expected to use the 5.9 GHz ITS b
 \end{figure}
 
 
+\subsection*{Usage of network slicing in V2X communications}
+Network slicing is a technology that offers a set of virtual subnetworks and parameter configurations adapted for the specific requirements of a service. An operator can operate several network slices in parallel and guarantee, at the same time, isolation between slices, so that communications that take place in one slice do not affect in a negative way services in other slices \cite{3GPPTR22891}. 
+
+One of the main limitation of the current networks is that different services are supported by the same architecture, being processed by the same components in the core network (CN) and sharing the same resources in the radio access network (RAN). This is why the concept of network slicing is crucial in view of future 5G implementations.
+
+A network slice that includes both RAN and CN make the slice design much more complicated but guarantees high flexibility, enabling for instance the placement of CN functions in the RAN in order to satisfy the stringent latency constraint that some use cases have to support. A slice of this type can be formed by several slice instances in the RAN and in the CN with a linking system between them that allows to support the specific service \cite{3GPPTR23799}.
+
+The key technology enablers that allow the implementation of network slicing are the split of control plane (CP) and user plane (UP) functionalities and the exploitation of open application programming interfaces (APIs) principles and of the possibility to program network functions, thanks to paradigms such as network function virtualization (NFV) \cite{ETSINFV} and software define networking (SDN) \cite{chen2015}. The split between CP an UP allows to move the associated functionalities in suitable locations: CP procedures could be placed in a central site in order to make the management less complex, while UP functions could be placed close to the user to reduce the access latency to the service. In addition, thanks to NFV, UP and CP functions can be deployed as virtual NFs and run independently on distinct platforms (e.g. low cost hardware or general purpose CPU), either in edge cloud or in remote cloud facilities, according to the paradigm named mobile edge computing (MEC) \cite{ETSIMEC}.
+
+An example of network slices for different V2X service categories is shown in figure \ref{fig:slices}. As we can see, the slices have to meet specific requirements that depend on the application. For instance, the slice for autonomous driving has to rely on ultra low-latency V2V as the main RAT connection mode and on additional CN and RAN functions, like for mobility, resource allocation over the PC5 interface and subscription management.
+The slice for vehicular infotainment services, instead, has to use multiple RATs for high throughput, and to store contents both in the remote cloud and in servers co-located at the base station. Furthermore, depending on the number of users, multiple MME instances could be needed.
+
+
+\begin{figure} [ht]
+   \centering
+  \includegraphics[width=1\linewidth]{_Graphics/slices.png}
+  \caption{Network slices for distinct V2X service categories. \cite{campolo2017}}
+  \label{fig:slices}
+\end{figure}
+
+
+The requirements and the design decisions that have to be made to implement a network slice for V2X services are described in the following:
+\begin{itemize}
+\item Slicing the RAN.
+
+\item Slicing the CN.
+
+\item Slicing the User Device.
+\end{itemize}
+
+
+Slicing the CN segment affects control plane
+(CP) functionalities, such as mobility management,
+session management, and authentication (as hosted
+in the MME and HSS), and user plane (UP)
+functionalities (e.g., those in the S-/P-GWs), which
+become programmable and auto-configurable [9].
+Slicing the RAN is a less mature and challenging
+practice (mainly due to the shared nature
+of wireless resources) and encompasses various
+radio access technology (RAT) parameter configurations,
+such as time/frequency resources,
+frame size, and hybrid automatic repeat request
+(HARQ) options [9].
 
 
 

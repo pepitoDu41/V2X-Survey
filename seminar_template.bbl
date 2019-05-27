@@ -125,6 +125,34 @@ S.~Chen, J.~Hu, Y.~Shi, Y.~Peng, J.~Fang, R.~Zhao, and L.~Zhao,
 5GAA-Automotive-Association, ``White paper: Timeline for deployment of c-v2x
   – update,'' \emph{5GAA White Papers}, 2019.
 
+\bibitem{3GPPTR22891}
+3GPP, ``Technical specification group services and system aspects; feasibility
+  study on new services and markets technology enablers, stage 1 (release
+  14),'' \emph{TR 22.891 v. 14.2.0}, Sept. 2016.
+
+\bibitem{3GPPTR23799}
+------, ``Technical specification group services and system aspects; study on
+  architecture for next generation system (release 14),'' \emph{TR 23.799 v.
+  0.6.0}, July 2016.
+
+\bibitem{ETSINFV}
+ETSI, ``Network functions virtualisation (nfv): Use cases,'' \emph{GS NFV 001,
+  v. 1.1.1}, Oct. 2013.
+
+\bibitem{chen2015}
+T.~Chen, M.~Matinmikko, X.~Chen, X.~Zhou, and P.~Ahokangas, ``Software defined
+  mobile networks: Concept, survey, and research directions,'' \emph{IEEE
+  Communications Magazine}, vol.~53, 11 2015.
+
+\bibitem{ETSIMEC}
+ETSI, ``Mobile-edge computing — introductory technical white paper,''
+  \emph{ETSI White Papers}, Sept. 2014.
+
+\bibitem{campolo2017}
+C.~{Campolo}, A.~{Molinaro}, A.~{Iera}, and F.~{Menichella}, ``5g network
+  slicing for vehicle-to-everything services,'' \emph{IEEE Wireless
+  Communications}, vol.~24, no.~6, pp. 38--45, Dec 2017.
+
 \bibitem{roberts2010}
 R.~{Roberts}, P.~{Gopalakrishnan}, and S.~{Rathi}, ``Visible light positioning:
   Automotive use case,'' in \emph{2010 IEEE Vehicular Networking Conference},
@@ -141,10 +169,5 @@ G.~{Karagiannis}, O.~{Altintas}, E.~{Ekici}, G.~{Heijenk}, B.~{Jarupan},
   requirements, architectures, challenges, standards and solutions,''
   \emph{IEEE Communications Surveys Tutorials}, vol.~13, no.~4, pp. 584--616,
   Fourth 2011.
-
-\bibitem{campolo2017}
-C.~{Campolo}, A.~{Molinaro}, A.~{Iera}, and F.~{Menichella}, ``5g network
-  slicing for vehicle-to-everything services,'' \emph{IEEE Wireless
-  Communications}, vol.~24, no.~6, pp. 38--45, Dec 2017.
 
 \end{thebibliography}

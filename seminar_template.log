@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.7)  27 MAY 2019 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.7)  27 MAY 2019 19:29
 entering extended mode
 **./seminar_template.tex
 (seminar_template.tex
@@ -664,35 +664,43 @@ File: _Graphics/evolution_timeline.png Graphic file (type png)
 
 <use _Graphics/evolution_timeline.png>
 Package pdftex.def Info: _Graphics/evolution_timeline.png used on input line 38
-8.
+6.
 (pdftex.def)             Requested size: 409.71692pt x 186.55319pt.
 
 <_Graphics/intersection.png, id=38, 253.69781pt x 183.68625pt>
 File: _Graphics/intersection.png Graphic file (type png)
 
 <use _Graphics/intersection.png>
-Package pdftex.def Info: _Graphics/intersection.png used on input line 401.
+Package pdftex.def Info: _Graphics/intersection.png used on input line 399.
 (pdftex.def)             Requested size: 227.62206pt x 164.81155pt.
  [8 <./_Graphics/evolution_timeline.png>]
-[9 <./_Graphics/intersection.png>] [10]
-<_Graphics/layer_architecture_dsrc.png, id=50, 787.94376pt x 770.88pt>
+<_Graphics/slices.png, id=43, 526.96875pt x 407.27156pt>
+File: _Graphics/slices.png Graphic file (type png)
+
+<use _Graphics/slices.png>
+Package pdftex.def Info: _Graphics/slices.png used on input line 420.
+(pdftex.def)             Requested size: 455.24411pt x 351.85625pt.
+ [9 <./_Graphics/intersection.png>] [10 <./_Graphics/slices.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11] <_Graphics/layer_architecture_dsrc.png, id=55, 787.94376pt x 770.88pt>
 File: _Graphics/layer_architecture_dsrc.png Graphic file (type png)
 
 <use _Graphics/layer_architecture_dsrc.png>
 Package pdftex.def Info: _Graphics/layer_architecture_dsrc.png used on input li
-ne 451.
+ne 493.
 (pdftex.def)             Requested size: 227.62206pt x 222.6908pt.
- [11 <./_Graphics/layer_architecture_dsrc.png>]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (2.99413pt too wide) in paragraph at lines 521--524
+ [12 <./_Graphics/layer_architecture_dsrc.png>] [13]
+Overfull \hbox (2.99413pt too wide) in paragraph at lines 563--566
 []\OT1/ptm/m/n/12 - While much of the tech-nol-ogy in-volved in V2X communi- ca
 tion has been well-coordinated
  []
 
-[12] (seminar_template.bbl [13]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+(seminar_template.bbl [14]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 116.
 
 
@@ -703,7 +711,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
-)
+ [15])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -715,12 +723,12 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[14] (seminar_template.aux) ) 
+[16] (seminar_template.aux) ) 
 Here is how much of TeX's memory you used:
- 3412 strings out of 493323
- 51820 string characters out of 3139061
- 136688 words of memory out of 3000000
- 6892 multiletter control sequences out of 15000+200000
+ 3423 strings out of 493323
+ 51995 string characters out of 3139061
+ 134717 words of memory out of 3000000
+ 6902 multiletter control sequences out of 15000+200000
  41760 words of font info for 77 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  39i,17n,25p,1832b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -730,9 +738,9 @@ Here is how much of TeX's memory you used:
  Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on seminar_template.pdf (14 pages, 922987 bytes).
+Output written on seminar_template.pdf (16 pages, 1050989 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
