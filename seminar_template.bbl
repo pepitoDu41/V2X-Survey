@@ -169,5 +169,27 @@ G.~{Karagiannis}, O.~{Altintas}, E.~{Ekici}, G.~{Heijenk}, B.~{Jarupan},
   requirements, architectures, challenges, standards and solutions,''
   \emph{IEEE Communications Surveys Tutorials}, vol.~13, no.~4, pp. 584--616,
   Fourth 2011.
+  
+  @article{molina2017lte,
+  title={LTE-V for sidelink 5G V2X vehicular communications: A new 5G technology for short-range vehicle-to-everything communications},
+  author={Molina-Masegosa, Rafael and Gozalvez, Javier},
+  journal={IEEE Vehicular Technology Magazine},
+  volume={12},
+  number={4},
+  pages={30--39},
+  year={2017},
+  publisher={IEEE}
+}
+
+@article{gonzalez2019analytical,
+  title={Analytical Models of the Performance of C-V2X Mode 4 Vehicular Communications},
+  author={Gonzalez-Mart{\'\i}n, Manuel and Sepulcre, Miguel and Molina-Masegosa, Rafael and Gozalvez, Javier},
+  journal={IEEE Transactions on Vehicular Technology},
+  volume={68},
+  number={2},
+  pages={1155--1166},
+  year={2019},
+  publisher={IEEE}
+}
 
 \end{thebibliography}
